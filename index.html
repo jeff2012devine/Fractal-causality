@@ -2,39 +2,77 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Fractal Causality — LOE™</title>
   <meta name="description" content="Fractal Causality — a falsifiable cosmological model emerging from the Law of Expansion (LOE™). Proof Pack, DOI, and links." />
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:title" content="Fractal Causality — LOE™" />
+  <meta property="og:description" content="A falsifiable cosmological model with testable predictions in cosmology and precision experiments." />
+  <meta property="og:url" content="https://fractalcausalityloe.com/" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Canonical -->
   <link rel="canonical" href="https://fractalcausalityloe.com/" />
+
+  <!-- Optional favicons (drop files in /assets when ready) -->
+  <link rel="icon" href="/assets/favicon.ico">
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" sizes="180x180">
+
+  <!-- JSON-LD for rich results -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"ScholarlyArticle",
+    "name":"Fractal Causality — A Model Emerging from LOE (The Law of Expansion): Proof Pack v1.0",
+    "author":{"@type":"Person","name":"Jeffrey M. Devine"},
+    "identifier":{"@type":"PropertyValue","propertyID":"DOI","value":"10.5281/zenodo.17148490"},
+    "url":"https://doi.org/10.5281/zenodo.17148490",
+    "publisher":{"@type":"Organization","name":"Zenodo"},
+    "datePublished":"2025"
+  }
+  </script>
+
   <style>
-    :root{--max:880px}
-    body{margin:0;font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:#0e0f13;color:#eaecee}
-    header,main,footer{max-width:var(--max);margin:auto;padding:22px}
-    header{padding-top:48px}
-    h1{font-size:36px;margin:0 0 6px}
-    h2{margin-top:28px}
-    .tag{opacity:.8}
-    .cta{display:inline-block;margin:10px 10px 0 0;padding:12px 16px;border:1px solid #3a3f47;border-radius:8px;text-decoration:none;color:#eaecee}
-    .cta.primary{border-color:#7aa2ff}
-    .grid{display:grid;gap:18px}
-    @media(min-width:720px){.grid{grid-template-columns:1fr 1fr}}
-    .card{border:1px solid #2b2f36;border-radius:12px;padding:16px;background:#14161b}
+    :root{--max:980px;--bg:#0e0f13;--panel:#14161b;--stroke:#2b2f36;--text:#eaecee;--muted:#9aa3ad;--accent:#7aa2ff}
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--bg);color:var(--text);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif}
+    .wrap{max-width:var(--max);margin:auto;padding:24px}
+    header{padding:56px 24px 24px;background:linear-gradient(180deg,#11131a,rgba(17,19,26,0))}
+    h1{font-size:44px;margin:0 0 6px}
+    h2{margin:0 0 8px}
+    p{margin:8px 0 0}
+    .sub{opacity:.85}
+    .btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:16px}
+    .btn{display:inline-block;padding:12px 16px;border:1px solid var(--stroke);border-radius:10px;text-decoration:none;color:var(--text)}
+    .btn.primary{border-color:var(--accent)}
+    .grid{display:grid;gap:18px;margin-top:22px}
+    @media(min-width:820px){.grid{grid-template-columns:1fr 1fr}}
+    .card{background:var(--panel);border:1px solid var(--stroke);border-radius:14px;padding:18px}
+    ul{margin:8px 0 0 18px}
     code{background:#1b1f27;padding:2px 6px;border-radius:6px}
-    footer{opacity:.7;padding-bottom:60px}
+    .mono{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace}
+    footer{border-top:1px solid var(--stroke);margin-top:28px;padding:18px;color:var(--muted);font-size:14px}
+    .citation{display:flex;gap:10px;align-items:center}
+    .chip{padding:4px 8px;border:1px solid var(--stroke);border-radius:999px;font-size:12px;color:var(--muted)}
   </style>
 </head>
 <body>
-<header>
-  <h1>Fractal Causality™</h1>
-  <div class="tag">and the Law of Expansion (LOE™)</div>
-  <p><strong>BURSTING FOREVER™</strong></p>
 
-  <a class="cta primary" href="https://doi.org/10.5281/zenodo.17148490" target="_blank" rel="noopener">📄 Read the Proof Pack (Zenodo DOI)</a>
-  <a class="cta" href="https://github.com/jeff2012devine/fractal-causality" target="_blank" rel="noopener">💻 View Repository</a>
-  <a class="cta" href="https://orcid.org/0009-0005-1400-3522" target="_blank" rel="noopener">🪪 ORCID Profile</a>
+<header class="wrap">
+  <div class="chip">BURSTING FOREVER™</div>
+  <h1>Fractal Causality™</h1>
+  <p class="sub">and the Law of Expansion (LOE™)</p>
+
+  <div class="btns">
+    <a class="btn primary" href="https://doi.org/10.5281/zenodo.17148490" target="_blank" rel="noopener">📄 Read the Proof Pack (Zenodo DOI)</a>
+    <a class="btn" href="https://github.com/jeff2012devine/fractal-causality" target="_blank" rel="noopener">💻 View Repository</a>
+    <a class="btn" href="https://orcid.org/0009-0005-1400-3522" target="_blank" rel="noopener">🪪 ORCID Profile</a>
+  </div>
 </header>
 
-<main>
+<main class="wrap">
   <section class="card">
     <h2>Overview</h2>
     <p><em>Fractal Causality (FC)</em> is a falsifiable cosmological model describing how our 3+1 universe emerges from a hidden fifth dimension we call the <strong>Law of Expansion (LOE)</strong>. Within LOE, localized <strong>Cosmic Quantum Bursts (CQBs)</strong> continuously project the universe’s structure. The model predicts recursive interference patterns that should appear as measurable signatures across cosmological datasets and precision experiments.</p>
@@ -53,7 +91,7 @@
     <div class="card">
       <h2>Reproducibility & contents</h2>
       <ul>
-        <li>📄 <strong>Proof Pack v1.0</strong> (equations, testing roadmap, reproducibility notes)</li>
+        <li>📄 <strong>Proof Pack v1.0</strong> — equations, testing roadmap, reproducibility notes</li>
         <li>🗒 Release notes tied to Zenodo DOIs</li>
         <li>🧪 <code>/src</code> (coming): fitting templates & synthetic injection demos</li>
       </ul>
@@ -62,12 +100,25 @@
 
   <section class="card">
     <h2>Citation</h2>
-    <p>Devine, J. M. (2025). <em>Fractal Causality — A Model Emerging from LOE (The Law of Expansion): Proof Pack v1.0</em>. Zenodo. <a href="https://doi.org/10.5281/zenodo.17148490">https://doi.org/10.5281/zenodo.17148490</a></p>
+    <div class="citation">
+      <div id="cite" class="mono">Devine, J. M. (2025). <em>Fractal Causality — A Model Emerging from LOE (The Law of Expansion): Proof Pack v1.0</em>. Zenodo. https://doi.org/10.5281/zenodo.17148490</div>
+      <button id="copy" class="btn">Copy</button>
+    </div>
   </section>
 </main>
 
-<footer>
-  © Jeffrey M. Devine — Fractal Causality™. This site is served via GitHub Pages.
+<footer class="wrap">
+  © Jeffrey M. Devine — Fractal Causality™ • <a class="btn" href="mailto:contact@fractalcausalityloe.com">contact@fractalcausalityloe.com</a>
 </footer>
+
+<script>
+  document.getElementById('copy').addEventListener('click', async () => {
+    const text = document.getElementById('cite').innerText;
+    try { await navigator.clipboard.writeText(text); 
+      const b = document.getElementById('copy'); b.textContent='Copied!'; setTimeout(()=>b.textContent='Copy',1200);
+    } catch(e){ alert('Copy failed — you can select the text manually.'); }
+  });
+</script>
+
 </body>
 </html>
