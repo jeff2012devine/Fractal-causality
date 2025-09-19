@@ -11,3 +11,4 @@ This repository contains the materials for **Fractal Causality (FC)**, a cosmolo
 If you use this work, please cite:  
 
 Devine, J. M. (2025). *Fractal Causality: The Law of Expansion and Continuous Quantum Bursts — Conceptual Framework and Mathematical Skeleton.* Zenodo. https://doi.org/10.5281/zenodo.17148490
+
