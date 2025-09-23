@@ -7,101 +7,73 @@
   <style>
     body {
       font-family: Arial, sans-serif;
-      line-height: 1.6;
       margin: 0;
       padding: 0;
-      background: #111;
-      color: #eee;
-    }
-    header {
-      text-align: center;
-      padding: 100px 20px;
       color: #fff;
-      background: url('A400738A-B748-4D1D-A500-42F9528C6169.jpeg') no-repeat center center;
+      text-align: center;
+      background: url("background.jpg") no-repeat center center fixed;
       background-size: cover;
     }
-    h1 {
-      margin: 0;
-      font-size: 3em;
-      text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
-    }
-    h2 {
-      margin: 10px 0 0;
-      font-weight: normal;
-      color: #ddd;
-      text-shadow: 1px 1px 6px rgba(0,0,0,0.7);
-    }
-    main {
-      max-width: 800px;
-      margin: 40px auto;
+    .content {
+      background: rgba(0, 0, 0, 0.7);
+      margin: 50px auto;
       padding: 20px;
-      background: #1c1c1c;
-      border-radius: 8px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+      border-radius: 10px;
+      width: 80%;
+      max-width: 900px;
+    }
+    h1, h2, h3 {
+      margin: 0.5em 0;
     }
     a {
-      color: #4db8ff;
+      color: #4da3ff;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .doi-badge {
+      margin: 15px 0;
     }
     footer {
-      text-align: center;
-      padding: 20px;
+      margin-top: 30px;
       font-size: 0.9em;
-      color: #999;
-    }
-    .center {
-      text-align: center;
-      margin-bottom: 20px;
+      color: #bbb;
     }
   </style>
 </head>
 <body>
-  <header>
+  <div class="content">
     <h1>Fractal Causality</h1>
     <h2>The Law of Expansion and Continuous Quantum Bursts</h2>
-  </header>
 
-  <main>
-    <div class="center">
-      <!-- DOI Badge -->
-      <a href="https://doi.org/10.5281/zenodo.17180456" target="_blank">
+    <div class="doi-badge">
+      <a href="https://doi.org/10.5281/zenodo.17180456" target="_blank" rel="noopener">
         <img src="https://zenodo.org/badge/DOI/10.5281/zenodo.17180456.svg" alt="DOI">
       </a>
-      <div class="center">
-  <!-- DOI Badge -->
-  <a href="https://doi.org/10.5281/zenodo.17180456" target="_blank" rel="noopener">
-    <img src="https://zenodo.org/badge/DOI/10.5281/zenodo.17180456.svg" alt="DOI badge">
-  </a>
-
-  <!-- DELETE this paragraph to avoid redundancy -->
-  <p>
-    DOI: <a href="https://doi.org/10.5281/zenodo.17180456" target="_blank" rel="noopener">
-      https://doi.org/10.5281/zenodo.17180456
-    </a>
-  </p>
-</div>
     </div>
 
     <h3>Files</h3>
     <ul>
-      <li><a href="Concept.pdf">Conceptual Model (v1.2)</a></li>
-      <li><a href="Fractal_Causality_Chalkboard.pdf">Mathematical Skeleton (v1.3)</a></li>
-      <li><a href="FC_LOE_ProofPack_final_v2.pdf">Proof Pack (v1.0)</a></li>
+      <li><a href="ConceptualModel.pdf" target="_blank">Conceptual Model (v1.2)</a> — Framework description, six-bubble system, black-hole intake.</li>
+      <li><a href="MathematicalSkeleton.pdf" target="_blank">Mathematical Skeleton (v1.3)</a> — Preliminary formalization: 5D burst field, continuity equation, circuit model, black-hole filtration.</li>
+      <li><a href="ProofPack.pdf" target="_blank">Proof Pack (v1.0)</a> — Extended equations, test simulations, structured derivations.</li>
     </ul>
 
     <h3>Citation</h3>
     <p>
-      <b>Devine, J. M.</b> (2025). <i>Fractal Causality: The Law of Expansion and Continuous Quantum Bursts — Conceptual Framework, Mathematical Skeleton, and Proof Pack</i>. Zenodo. 
-      <a href="https://doi.org/10.5281/zenodo.17180456">https://doi.org/10.5281/zenodo.17180456</a>
+      Devine, J. M. (2025). <i>Fractal Causality: The Law of Expansion and Continuous Quantum Bursts — Conceptual Framework, Mathematical Skeleton, and Proof Pack</i>. Zenodo.  
+      <a href="https://doi.org/10.5281/zenodo.17180456" target="_blank" rel="noopener">https://doi.org/10.5281/zenodo.17180456</a>
     </p>
 
     <h3>Attribution</h3>
     <p>
-      Fractal Causality is the original work of <b>Jeffrey M. Devine</b>. Collaboration is welcome, but attribution is required.
+      Fractal Causality is the original work of Jeffrey M. Devine. Collaboration is welcome, but attribution is required.
     </p>
-  </main>
 
-  <footer>
-    &copy; 2025 Jeffrey M. Devine | Universal Believer LLC
-  </footer>
+    <footer>
+      © 2025 Jeffrey M. Devine | Universal Believer LLC
+    </footer>
+  </div>
 </body>
 </html>
