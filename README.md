@@ -36,7 +36,7 @@ If you use this work, please cite:
 
 **APA**  
 Devine, J. M. (2025). *Fractal Causality: The Law of Expansion and Continuous Quantum Bursts — Conceptual Framework, Mathematical Skeleton, and Proof Pack*. Zenodo. https://doi.org/10.5281/zenodo.17180456  
-
+<p><strong>Attribution:</strong> Fractal Causality is the original work of Jeffrey M. Devine (DOI: <a href="https://doi.org/10.5281/zenodo.17180456">10.5281/zenodo.17180456</a>). Collaboration is welcome, but attribution is required.</p>
 **BibTeX**  
 ```bibtex
 @misc{devine2025fractal,
