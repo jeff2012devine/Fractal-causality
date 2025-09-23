@@ -20,20 +20,18 @@
     background: var(--bg) url('background.jpg') center / cover fixed no-repeat;
   }
 
-  /* HERO */
+  /* HERO adds height & presence */
   .hero{
     position:relative;
-    min-height:46vh;
+    min-height:52vh;
     display:flex; align-items:center; justify-content:center;
-    padding:64px 16px 40px; text-align:center;
-    isolation:isolate;
+    padding:68px 16px 48px; text-align:center; isolation:isolate;
   }
-  /* subtle glaze so text pops on any background */
   .hero::before{
     content:""; position:absolute; inset:0; z-index:-1;
     background:
-      radial-gradient(1200px 500px at 50% 20%, rgba(0,0,0,.25), transparent 60%),
-      linear-gradient(to bottom, rgba(0,0,0,.45), rgba(0,0,0,.75));
+      radial-gradient(1200px 520px at 50% 25%, rgba(0,0,0,.28), transparent 62%),
+      linear-gradient(to bottom, rgba(0,0,0,.45), rgba(0,0,0,.78));
   }
   .title{margin:.05em 0 .2em; font-weight:800; letter-spacing:.3px;
          font-size:clamp(36px,5.5vw,60px); text-shadow:0 10px 35px rgba(0,0,0,.6)}
@@ -41,14 +39,15 @@
             font-size:clamp(16px,2.4vw,20px)}
   .badge img{height:32px; filter: drop-shadow(0 4px 12px rgba(0,0,0,.5));}
 
-  /* CONTENT */
-  main{max-width:980px; margin:-36px auto 72px; padding:0 16px}
+  /* CONTENT card */
+  main{max-width:980px; margin:-28px auto 80px; padding:0 16px}
   .card{
-    background:var(--card);
+    background:var(--card);               /* lets bg show through slightly */
     border-radius:16px;
     padding:36px 28px;
     box-shadow:var(--shadow);
     backdrop-filter:saturate(110%) blur(2px);
+    min-height:38vh;
   }
   .section{padding:22px 0}
   .section + .section{border-top:1px solid var(--line)}
@@ -58,9 +57,9 @@
   li{margin:.42em 0}
   a{color:var(--link); text-decoration:underline}
   a:hover{opacity:.9}
-  footer{color:#aab3bd; text-align:center; margin:30px 0 46px; font-size:.95rem}
 
-  /* subtle entrance */
+  footer{color:#aab3bd; text-align:center; margin:36px 0 48px; font-size:.95rem}
+
   @media (prefers-reduced-motion: no-preference){
     .card{animation:fadeUp .6s ease-out both}
     @keyframes fadeUp{from{opacity:0; transform:translateY(8px)} to{opacity:1; transform:none}}
