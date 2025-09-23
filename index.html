@@ -9,80 +9,82 @@
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
-      color: #fff;
-      text-align: center;
-      background: url("background.jpg") no-repeat center center fixed;
+      background: url('background.jpg') no-repeat center center fixed;
       background-size: cover;
+      color: white;
+      text-align: center;
     }
-    .overlay {
-      background-color: rgba(0, 0, 0, 0.7);
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      padding: 40px 20px;
-    }
-    .content {
+    .container {
+      background: rgba(0, 0, 0, 0.7);
+      margin: 40px auto;
+      padding: 20px;
+      border-radius: 12px;
       max-width: 800px;
     }
-    h1, h2, h3 {
-      margin-bottom: 20px;
+    h1 {
+      font-size: 2.5em;
+      margin-bottom: 0.3em;
     }
-    ul {
-      list-style: none;
-      padding: 0;
-    }
-    li {
-      margin: 10px 0;
+    h2 {
+      font-size: 1.2em;
+      font-weight: 300;
+      margin-top: 0;
+      margin-bottom: 1.5em;
     }
     a {
-      color: #61dafb;
+      color: #4da3ff;
       text-decoration: none;
     }
     a:hover {
       text-decoration: underline;
     }
-    footer {
-      margin-top: 40px;
+    .files {
+      text-align: left;
+      margin: 20px 0;
+    }
+    .footer {
+      margin-top: 30px;
       font-size: 0.9em;
-      color: #bbb;
+      color: #ddd;
+    }
+    .doi {
+      margin: 10px 0;
     }
   </style>
 </head>
 <body>
-  <div class="overlay">
-    <div class="content">
-      <h1>Fractal Causality</h1>
-      <h2>The Law of Expansion and Continuous Quantum Bursts</h2>
+  <div class="container">
+    <h1>Fractal Causality</h1>
+    <h2>The Law of Expansion and Continuous Quantum Bursts</h2>
 
-      <p>
-        <a href="https://doi.org/10.5281/zenodo.17180456" target="_blank">
-          <img src="https://zenodo.org/badge/DOI/10.5281/zenodo.17180456.svg" alt="DOI">
-        </a>
-      </p>
+    <div class="doi">
+      <a href="https://doi.org/10.5281/zenodo.17180456">
+        <img src="https://zenodo.org/badge/DOI/10.5281/zenodo.17180456.svg" alt="DOI">
+      </a>
+    </div>
 
-      <h3>Files</h3>
+    <h3>Files</h3>
+    <div class="files">
       <ul>
-        <li><a href="concept.pdf" target="_blank">Conceptual Model (v1.2)</a></li>
-        <li><a href="chalkboard.pdf" target="_blank">Mathematical Skeleton (v1.3)</a></li>
-        <li><a href="proof_pack.pdf" target="_blank">Proof Pack (v1.0)</a></li>
+        <li><a href="concept.pdf">Conceptual Model (v1.2)</a></li>
+        <li><a href="chalkboard.pdf">Mathematical Skeleton (v1.3)</a></li>
+        <li><a href="proof_pack.pdf">Proof Pack (v1.0)</a></li>
       </ul>
+    </div>
 
-      <h3>Citation</h3>
-      <p>
-        Devine, J. M. (2025). <i>Fractal Causality: The Law of Expansion and Continuous Quantum Bursts — Conceptual Framework, Mathematical Skeleton, and Proof Pack</i>. Zenodo. 
-        <a href="https://doi.org/10.5281/zenodo.17180456" target="_blank">https://doi.org/10.5281/zenodo.17180456</a>
-      </p>
+    <h3>Citation</h3>
+    <p>
+      Devine, J. M. (2025). <i>Fractal Causality: The Law of Expansion and Continuous Quantum Bursts — Conceptual Framework, Mathematical Skeleton, and Proof Pack</i>. Zenodo. 
+      <a href="https://doi.org/10.5281/zenodo.17180456">https://doi.org/10.5281/zenodo.17180456</a>
+    </p>
 
-      <h3>Attribution</h3>
-      <p>
-        Fractal Causality is the original work of Jeffrey M. Devine. Collaboration is welcome, but attribution is required.
-      </p>
+    <h3>Attribution</h3>
+    <p>
+      Fractal Causality is the original work of <b>Jeffrey M. Devine</b>. Collaboration is welcome, but attribution is required.
+    </p>
 
-      <footer>
-        © 2025 Jeffrey M. Devine
-      </footer>
+    <div class="footer">
+      © 2025 Jeffrey M. Devine
     </div>
   </div>
 </body>
