@@ -1,6 +1,6 @@
 # Fractal Causality: The Law of Expansion and Continuous Quantum Bursts  
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17148490.svg)](https://doi.org/10.5281/zenodo.17148490)  
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17148490.svg)](https://doi.org/10.5281/zenodo.17180456)  
 
 This repository contains the materials for **Fractal Causality (FC)**, a cosmological framework defined by the **Law of Expansion (LOE)** and driven by **Continuous Quantum Bursts (CQBs)** within the 5th dimensional Big Bang field.  
 
