@@ -4,54 +4,39 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 <title>Fractal Causality</title>
-<meta name="color-scheme" content="dark light">
-<link rel="preload" href="background.jpg" as="image">
 <style>
   :root{
     --fg:#ecf1f7; --muted:#c1cbd6; --link:#63b8ff;
-    --bg:#0d1117;            /* fallback color */
-    --card:rgba(0,0,0,.52);  /* lighter so the picture shows through */
-    --line:#2a2f36;
+    --card:rgba(0,0,0,.46); --line:#2a2f36;
     --shadow:0 20px 60px rgba(0,0,0,.45), 0 8px 24px rgba(0,0,0,.3);
   }
-
   *{box-sizing:border-box}
   html,body{height:100%}
   body{
     margin:0; color:var(--fg);
     font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
-    background: var(--bg) url('background.jpg') center / cover no-repeat; /* no fixed */
-    min-height:140vh; /* restore page length */
+    /* TILED WALLPAPER */
+    background: #0d1117 url('tile.jpg') repeat center top;
+    background-size: 420px auto;      /* smaller = denser tiles; try 320–520 */
+    min-height:140vh;                  /* adds page length */
   }
 
-  /* HERO — no dark glaze overlay */
   .hero{
-    min-height:52vh;
-    display:flex; align-items:center; justify-content:center;
-    text-align:center; padding:64px 16px 40px;
-    text-shadow:0 6px 24px rgba(0,0,0,.45);
+    min-height:44vh; display:flex; align-items:center; justify-content:center;
+    text-align:center; padding:60px 16px 28px;
+    text-shadow:0 6px 22px rgba(0,0,0,.45);
   }
-  .title{
-    margin:.05em 0 .2em; font-weight:800; letter-spacing:.3px;
-    font-size:clamp(36px,5.5vw,60px);
-  }
-  .subtitle{
-    margin:.2em 0 1.1em; color:var(--muted);
-    font-size:clamp(16px,2.4vw,20px)
-  }
+  .title{margin:.05em 0 .2em; font-weight:800; letter-spacing:.3px;
+         font-size:clamp(36px,5.5vw,60px)}
+  .subtitle{margin:.2em 0 1.1em; color:var(--muted); font-size:clamp(16px,2.4vw,20px)}
   .badge img{height:32px; filter:drop-shadow(0 4px 12px rgba(0,0,0,.4));}
 
-  /* CONTENT */
-  main{max-width:980px; margin:-8px auto 84px; padding:0 16px}
+  main{max-width:980px; margin:0 auto 80px; padding:0 16px}
   .card{
-    background:var(--card);     /* set to 'transparent' if you want pure image */
-    border-radius:16px;
-    padding:32px 26px;
-    box-shadow:var(--shadow);
-    backdrop-filter:saturate(110%) blur(1px);
-    min-height:38vh;
+    background:var(--card);            /* make more/less see-through by changing alpha */
+    border-radius:16px; padding:32px 26px;
+    box-shadow:var(--shadow); backdrop-filter:saturate(110%) blur(1px);
   }
-
   .section{padding:20px 0}
   .section + .section{border-top:1px solid var(--line)}
   h3{margin:.1em 0 .6em; font-size:1.15rem; letter-spacing:.2px}
@@ -61,11 +46,6 @@
   a{color:var(--link); text-decoration:underline}
   a:hover{opacity:.9}
   footer{color:#aab3bd; text-align:center; margin:34px 0 52px; font-size:.95rem}
-
-  @media (prefers-reduced-motion:no-preference){
-    .card{animation:fadeUp .55s ease-out both}
-    @keyframes fadeUp{from{opacity:0; transform:translateY(8px)} to{opacity:1; transform:none}}
-  }
 </style>
 </head>
 <body>
@@ -87,9 +67,9 @@
     <section class="section">
       <h3>Files</h3>
       <ul>
-        <li><a href="concept.pdf" target="_blank" rel="noopener">Conceptual Model (v1.2)</a> — framework description, six-bubble system, black-hole intake.</li>
-        <li><a href="chalkboard.pdf" target="_blank" rel="noopener">Mathematical Skeleton (v1.3)</a> — 5D burst field, continuity equation, circuit model, black-hole filtration.</li>
-        <li><a href="proof_pack.pdf" target="_blank" rel="noopener">Proof Pack (v1.0)</a> — extended equations, test simulations, structured derivations.</li>
+        <li><a href="concept.pdf" target="_blank" rel="noopener">Conceptual Model (v1.2)</a></li>
+        <li><a href="chalkboard.pdf" target="_blank" rel="noopener">Mathematical Skeleton (v1.3)</a></li>
+        <li><a href="proof_pack.pdf" target="_blank" rel="noopener">Proof Pack (v1.0)</a></li>
       </ul>
     </section>
 
