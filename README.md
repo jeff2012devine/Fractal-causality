@@ -1,54 +1,32 @@
-# Fractal Causality: The Law of Expansion and Continuous Quantum Bursts  
+# Fractal Causality (Law of Expansion) – Proof Pack v2
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17180456.svg)](https://doi.org/10.5281/zenodo.17180456)  
-
----
-
-## Overview  
-
-This repository contains the official materials for **Fractal Causality (FC)** — a cosmological framework that challenges and extends the standard Big Bang model.  
-
-At the heart of FC is the **Law of Expansion (LOE)**, which acts as a universal conveyor belt of existence, continuously driven by **Continuous Quantum Bursts (CQBs)** and powered by the cyclical recycling role of black holes.  
-
-Together, these elements form a **closed-circuit system** — a fractal architecture of infinite loops of creation, transformation, and renewal.  
+This repository contains the public release of **Fractal Causality (LOE)**, including the conceptual framework, chalkboard equations, and the complete proof pack.
 
 ---
 
-## Files  
+## 📂 Files (Version 2)
 
-📄 **Conceptual Model (v1.2)**  
-*Framework description, six-bubble system, black-hole intake.*  
-[View/Download](Concept.pdf)  
-
-📄 **Mathematical Skeleton (v1.3)**  
-*Preliminary formalization: 5D burst field, continuity equation, circuit model, black-hole filtration.*  
-[View/Download](Fractal_Causality_Chalkboard.pdf)  
-
-📄 **Proof Pack (v1.0)**  
-*Extended equations, test simulations, and structured derivations that support the model.*  
-[View/Download](FC_LOE_ProofPack_final_v2.pdf)  
+- [Conceptual Framework (v2)](fc_concept_v2.pdf)  
+- [Chalkboard Equations (v2)](fc_chalkboard_v2.pdf)  
+- [Full Proof Pack (v2)](fc_full_v2.pdf)  
 
 ---
 
-## Citation  
+## 📌 DOI
 
-If you use this work, please cite:  
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17193227.svg)](https://doi.org/10.5281/zenodo.17193227)
 
-**APA**  
-Devine, J. M. (2025). *Fractal Causality: The Law of Expansion and Continuous Quantum Bursts — Conceptual Framework, Mathematical Skeleton, and Proof Pack*. Zenodo. https://doi.org/10.5281/zenodo.17180456  
-### Attribution
-Fractal Causality is the original work of Jeffrey M. Devine (DOI: [10.5281/zenodo.17180456](https://doi.org/10.5281/zenodo.17180456)).  
-Collaboration is welcome, but attribution is required.
-**BibTeX**  
-```bibtex
-@misc{devine2025fractal,
-  author       = {Devine, Jeffrey M.},
-  title        = {Fractal Causality: The Law of Expansion and Continuous Quantum Bursts — Conceptual Framework, Mathematical Skeleton, and Proof Pack},
-  year         = {2025},
-  publisher    = {Zenodo},
-  doi          = {10.5281/zenodo.17180456},
-  url          = {https://doi.org/10.5281/zenodo.17180456}
-}
+**DOI:** [10.5281/zenodo.17193227](https://doi.org/10.5281/zenodo.17193227)
 
+---
 
+## 📖 Description
 
+Fractal Causality proposes that cosmic structure emerges from continuous quantum bursts (CQBs) governed by the **Law of Expansion (LOE)**.  
+This proof pack includes both conceptual framing and mathematical sketches intended for peer evaluation.
+
+---
+
+## 🔗 Citation
+
+If you reference this work, please cite:
