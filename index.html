@@ -1,56 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Fractal Causality (LOE) – Proof Pack v2</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fractal Causality (Law of Expansion)</title>
   <style>
     body {
       font-family: Arial, sans-serif;
-      line-height: 1.6;
       margin: 0;
-      padding: 0;
-      background: #0b0c10;
-      color: #f5f5f5;
+      background-color: #0d0d0d;
+      color: #e6e6e6;
       text-align: center;
+      line-height: 1.6;
     }
-    header { padding: 2rem 1rem; }
-    h1 { margin: 0 0 .3rem 0; }
-    .container { max-width: 820px; margin: 0 auto; padding: 1rem 2rem 3rem; }
-    a { color: #66fcf1; text-decoration: none; font-weight: 700; }
-    a:hover { text-decoration: underline; }
-    .files { margin: 2rem auto; }
-    .files ul { list-style: none; padding: 0; margin: 0; }
-    .files li { margin: .75rem 0; }
-    .badge { margin-top: 1rem; }
-    footer { margin: 2.5rem 0 1.5rem; font-size: .95rem; color: #aaa; }
+    header {
+      padding: 50px 20px;
+      background: linear-gradient(135deg, #111, #222);
+      border-bottom: 2px solid #444;
+    }
+    header h1 {
+      font-size: 2.5em;
+      margin-bottom: 0.3em;
+    }
+    header p {
+      font-size: 1.2em;
+      color: #bbb;
+    }
+    .doi-badge {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 10px 20px;
+      background-color: #0056b3;
+      color: #fff;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    section {
+      padding: 40px 20px;
+    }
+    .file-links {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      max-width: 400px;
+      margin: 0 auto;
+    }
+    .file-links a {
+      display: block;
+      padding: 12px;
+      background: #222;
+      border: 1px solid #444;
+      border-radius: 6px;
+      text-decoration: none;
+      color: #fff;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+    .file-links a:hover {
+      background: #333;
+    }
+    footer {
+      padding: 20px;
+      font-size: 0.9em;
+      color: #888;
+      border-top: 1px solid #333;
+      margin-top: 40px;
+    }
   </style>
 </head>
 <body>
   <header>
     <h1>Fractal Causality (Law of Expansion)</h1>
-    <p>Public Release – Version 2</p>
-    <div class="badge">
-      <a href="https://doi.org/10.5281/zenodo.17193227" target="_blank" rel="noopener">
-        <img src="https://zenodo.org/badge/DOI/10.5281/zenodo.17193227.svg" alt="DOI: 10.5281/zenodo.17193227" />
-      </a>
-    </div>
+    <p>Public Release — Version 2</p>
+    <a href="https://doi.org/10.5281/zenodo.17193227" class="doi-badge">DOI: 10.5281/zenodo.17193227</a>
   </header>
 
-  <main class="container">
-    <p>Download the v2 files:</p>
-    <section class="files">
-      <ul>
-        <li><a href="fc_concept_v2.pdf" target="_blank" rel="noopener">📄 Conceptual Framework (v2)</a></li>
-        <li><a href="fc_chalkboard_v2.pdf" target="_blank" rel="noopener">📄 Chalkboard Equations (v2)</a></li>
-        <li><a href="fc_full_v2.pdf" target="_blank" rel="noopener">📄 Full Proof Pack (v2)</a></li>
-      </ul>
-    </section>
+  <section>
+    <h2>Download the v2 Files</h2>
+    <div class="file-links">
+      <a href="conceptual_framework_v2.pdf">📄 Conceptual Framework (v2)</a>
+      <a href="chalkboard_equations_v2.pdf">📄 Chalkboard Equations (v2)</a>
+      <a href="proof_pack_v2.pdf">📄 Full Proof Pack (v2)</a>
+    </div>
+  </section>
 
-    <footer>
-      <p>DOI: <a href="https://doi.org/10.5281/zenodo.17193227" target="_blank" rel="noopener">10.5281/zenodo.17193227</a></p>
-      <p>&copy; 2025 Jeffrey Martin Devine • Last updated: v2</p>
-    </footer>
-  </main>
+  <footer>
+    <p>© 2025 Jeffrey Martin Devine — Fractal Causality</p>
+    <p>Last updated: Version 2</p>
+  </footer>
 </body>
 </html>
