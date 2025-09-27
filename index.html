@@ -1,108 +1,79 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fractal Causality (Law of Expansion)</title>
+  <meta charset="utf-8" />
+  <title>Fractal Causality v3.2 — J.M. Devine</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      background-color: #0d0d0d;
-      color: #e6e6e6;
-      text-align: center;
-      line-height: 1.6;
-    }
-    header {
-      padding: 50px 20px;
-      background: linear-gradient(135deg, #111, #222);
-      border-bottom: 2px solid #444;
-    }
-    header h1 {
-      font-size: 2.5em;
-      margin-bottom: 0.3em;
-    }
-    header p {
-      font-size: 1.2em;
-      color: #bbb;
-    }
-    .description {
-      margin-top: 20px;
-      max-width: 700px;
-      margin-left: auto;
-      margin-right: auto;
-      font-size: 1em;
-      color: #ccc;
-    }
-    .doi-badge {
-      display: inline-block;
-      margin-top: 15px;
-      padding: 10px 20px;
-      background-color: #0056b3;
-      color: #fff;
-      border-radius: 6px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    section {
-      padding: 40px 20px;
-    }
-    .file-links {
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-      max-width: 400px;
-      margin: 0 auto;
-    }
-    .file-links a {
-      display: block;
-      padding: 12px;
-      background: #222;
-      border: 1px solid #444;
-      border-radius: 6px;
-      text-decoration: none;
-      color: #fff;
-      font-weight: bold;
-      transition: background 0.3s;
-    }
-    .file-links a:hover {
-      background: #333;
-    }
-    footer {
-      padding: 20px;
-      font-size: 0.9em;
-      color: #888;
-      border-top: 1px solid #333;
-      margin-top: 40px;
-    }
+    body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; margin: 0; color: #111; }
+    header { padding: 48px 24px; background: #f6f7fb; border-bottom: 1px solid #e5e7eb; }
+    .wrap { max-width: 900px; margin: 0 auto; }
+    h1 { margin: 0 0 8px; font-size: 32px; }
+    .meta { color: #555; margin: 4px 0 16px; }
+    .badge { display: inline-block; margin: 8px 0 0; }
+    section { padding: 32px 24px; border-bottom: 1px solid #f0f2f5; }
+    h2 { margin-top: 0; }
+    .files a { display: block; padding: 10px 12px; margin: 8px 0; text-decoration: none; border: 1px solid #e5e7eb; border-radius: 8px; }
+    .files a:hover { background: #fafafa; }
+    footer { padding: 24px; color: #666; font-size: 14px; }
   </style>
 </head>
 <body>
   <header>
-    <h1>Fractal Causality (Law of Expansion)</h1>
-    <p>Public Release — Version 2</p>
-    <a href="https://doi.org/10.5281/zenodo.17193227" class="doi-badge">DOI: 10.5281/zenodo.17193227</a>
-    <div class="description">
-      I am not a physicist by training, but a curious member of this universe.  
-      What follows is the result of observation, persistence, and a deep sense that  
-      patterns of existence reveal more than we often acknowledge.  
-      This work is shared in humility, not as a final answer, but as a contribution to  
-      the conversation about how reality unfolds.  
+    <div class="wrap">
+      <h1>Fractal Causality v3.2 — Flagship Release</h1>
+      <div class="meta">
+        Author: J.M. Devine • DOI: <a href="https://doi.org/10.5281/zenodo.17214354">10.5281/zenodo.17214354</a> •
+        Date: September 2025 • <a href="https://fractalcausalityloe.com">fractalcausalityloe.com</a>
+      </div>
+      <a class="badge" href="https://doi.org/10.5281/zenodo.17214354">
+        <img alt="DOI" src="https://zenodo.org/badge/DOI/10.5281/zenodo.17214354.svg">
+      </a>
     </div>
   </header>
 
   <section>
-    <h2>Download the v2 Files</h2>
-    <div class="file-links">
-      <a href="conceptual_framework_v2.pdf">📄 Conceptual Framework (v2)</a>
-      <a href="chalkboard_equations_v2.pdf">📄 Chalkboard Equations (v2)</a>
-      <a href="proof_pack_v2.pdf">📄 Full Proof Pack (v2)</a>
+    <div class="wrap">
+      <h2>Plain-Language Introduction</h2>
+      <p>
+        Fractal Causality is a hypothesis that the universe carries a hidden rhythm — a repeating log-periodic pattern —
+        that appears across multiple scales. From the clustering of galaxies, to the hum of gravitational waves and atomic
+        clocks, to predictive signals in the human brain, the model proposes that a single underlying “oscillator” leaves
+        its fingerprints everywhere.
+      </p>
+      <p>
+        Version 3.2 formalizes this into a testable framework with precise equations, falsifiability criteria, and
+        reproducibility protocols.
+      </p>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <h2>Download</h2>
+      <div class="files">
+        <a href="docs/readme_fc_v3.2.pdf">Readme — Plain-Language Intro (PDF)</a>
+        <a href="docs/fractalcausality_v3.2_part1.pdf">Thesis (Core) — Part 1 (PDF)</a>
+        <a href="docs/fractalcausality_v3.2_part2.pdf">Technical Supplement — Part 2 (PDF)</a>
+        <a href="releases/fractalcausality_v3.2_flagship.zip">Flagship Bundle (ZIP)</a>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <h2>Citation</h2>
+      <p>
+        Devine, J.M. (2025). <em>Fractal Causality v3.2 (Flagship Release)</em>. Zenodo.
+        <a href="https://doi.org/10.5281/zenodo.17214354">https://doi.org/10.5281/zenodo.17214354</a>
+      </p>
     </div>
   </section>
 
   <footer>
-    <p>© 2025 Jeffrey Martin Devine — Fractal Causality</p>
-    <p>Last updated: Version 2</p>
+    <div class="wrap">
+      © 2025 J.M. Devine • This site is published via GitHub Pages. DOI: 10.5281/zenodo.17214354
+    </div>
   </footer>
 </body>
 </html>
