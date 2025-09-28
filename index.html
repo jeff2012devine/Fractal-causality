@@ -45,6 +45,10 @@
         <strong>Purpose:</strong> This page presents <em>Fractal Causality</em> as a <strong>testable hypothesis</strong> and a <strong>reproducible scaffold</strong>.
         It is <u>not</u> a final theory. Below are clear, falsifiable predictions and step-by-step testing instructions.
       </div>
+      <div class="callout" style="margin-top:14px;background:#102; border-left-color:#34d399;">
+        <strong>Headline Prediction:</strong> If Fractal Causality is true, then <em>independent datasets</em> — galaxy distributions, gravitational-wave event timing, long-baseline atomic-clock drift, and EEG signals — will exhibit a <u>common log-periodic frequency band</u> within a pre-specified tolerance.  
+        If no such band appears across ≥2 independent domains under the same analysis, the hypothesis is <span class="bad">falsified</span>.
+      </div>
     </div>
   </header>
 
@@ -82,7 +86,7 @@
         <ol>
           <li>Pick a time-stamped dataset (e.g., public gravitational-wave event times, long atomic-clock drift series, or open EEG).</li>
           <li>Transform time to <code>log(t)</code> (choose a sensible epoch; sensitivity analysis below).</li>
-          <li>Fit a simple model <code>X(t) = A + B·cos(ω·log(t) + φ)</code> and scan for <code>ω</code> with Lomb–Scargle or FFT on log-time.</li>
+          <li>Fit <code>X(t) = A + B·cos(ω·log(t) + φ)</code> and scan for <code>ω</code> with Lomb–Scargle or FFT on log-time.</li>
           <li>Generate <em>surrogate</em> series (phase-randomized / shuffled intervals) and repeat.</li>
           <li>If the real data’s peak power at some <code>ω*</code> <em>consistently</em> exceeds surrogates (p&lt;0.01 after multiple-test correction),
               you’ve found a candidate log-periodic frequency. If not, that dataset is a <span class="bad">fail</span>.</li>
@@ -92,7 +96,7 @@
       <div class="panel">
         <h3>Technical Protocol (Specialists)</h3>
         <ol>
-          <li><strong>Targets</strong> (choose ≥1; mixing across domains is encouraged):
+          <li><strong>Targets</strong> (choose ≥1; mixing across domains encouraged):
             <ul>
               <li><em>GW timing:</em> LIGO/Virgo event catalogs (inter-event intervals, cumulative counts vs. time).</li>
               <li><em>Cosmology:</em> galaxy clustering / BAO residuals for log-periodic modulations.</li>
@@ -100,7 +104,7 @@
               <li><em>Neuro:</em> open EEG datasets (OpenNeuro, PhysioNet) for wide-band log-periodic structure beyond canonical bands.</li>
             </ul>
           </li>
-          <li><strong>Signal model</strong> (minimal):
+          <li><strong>Signal model</strong>:
             <div class="callout">
               Fit on log-time or log-scale: <code>x(t) = A + Σ B_k · cos(ω · log(t) + φ_k)</code> with k = 1..K (usually K=1–2).<br>
               Alternative: continuous wavelet transform with log-spaced center frequencies; test for stationary peaks in log-frequency.
@@ -120,8 +124,7 @@
               <li>Cross-domain consistency: do candidate <code>ω*</code> values cluster (within tolerance) across independent domains?</li>
             </ul>
           </li>
-          <li><strong>Pre-registration</strong> (recommended): lock analysis choices (epoch, transforms, windows, nulls) before running.</li>
-          <li><strong>Calibration locks</strong>: share code + random seeds; release “frozen” container (Docker) to ensure reproducibility.</li>
+          <li><strong>Pre-registration</strong> recommended before running analyses.</li>
           <li><strong>Decision rule (falsifiable)</strong>:
             <ul>
               <li class="bad">Falsify if: no domain shows significant log-periodic peaks beyond nulls <em>or</em> discovered peaks are mutually inconsistent across domains.</li>
@@ -146,19 +149,6 @@
           <li>Release a container (Docker) or notebook that reproduces all figures from a one-click run.</li>
           <li>Include a short <em>Negative Control</em> section showing failure on randomized/synthetic controls.</li>
         </ul>
-      </div>
-    </div>
-  </section>
-
-  <section id="position">
-    <div class="wrap">
-      <h2>Positioning (Why This Isn’t “Vague”)</h2>
-      <div class="panel">
-        <p>
-          This project is a <strong>scaffold</strong> for testing a unifying rhythmic pattern. It makes <em>specific</em>,
-          <em>falsifiable</em> predictions about log-periodic structure that should appear — or fail to appear — in real data.
-          It does not claim finished theory; it invites verification or refutation.
-        </p>
       </div>
     </div>
   </section>
