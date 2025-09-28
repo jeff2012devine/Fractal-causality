@@ -41,10 +41,6 @@
       <a class="badge" href="https://doi.org/10.5281/zenodo.17214354">
         <img alt="DOI" src="https://zenodo.org/badge/DOI/10.5281/zenodo.17214354.svg">
       </a>
-      <div class="callout" style="margin-top:14px">
-        <strong>Purpose:</strong> This page presents <em>Fractal Causality</em> as a <strong>testable hypothesis</strong> and a <strong>reproducible scaffold</strong>.
-        It is <u>not</u> a final theory. Below is a plain-language summary and a falsifiable prediction.
-      </div>
     </div>
   </header>
 
@@ -60,9 +56,13 @@
     </div>
   </section>
 
-  <section id="prediction">
+  <section id="purpose">
     <div class="wrap">
-      <div class="callout" style="background:#102; border-left-color:#34d399;">
+      <div class="callout" style="margin-top:14px">
+        <strong>Purpose:</strong> This page presents <em>Fractal Causality</em> as a <strong>testable hypothesis</strong> and a <strong>reproducible scaffold</strong>.
+        It is <u>not</u> a final theory. Below is a falsifiable prediction.
+      </div>
+      <div class="callout" style="margin-top:14px;background:#102; border-left-color:#34d399;">
         <strong>Headline Prediction:</strong> If Fractal Causality is true, then <em>independent datasets</em> — galaxy distributions, gravitational-wave event timing, long-baseline atomic-clock drift, and EEG signals — will exhibit a <u>common log-periodic frequency band</u> within a pre-specified tolerance.  
         If no such band appears across ≥2 independent domains under the same analysis, the hypothesis is <span class="bad">falsified</span>.
       </div>
@@ -85,7 +85,6 @@
   <section id="how-to-test">
     <div class="wrap">
       <h2>How to Test the Hypothesis</h2>
-
       <div class="panel" style="margin-bottom:14px">
         <h3>Quick Test (Data-curious / Non-specialist)</h3>
         <ol>
@@ -97,49 +96,45 @@
               you’ve found a candidate log-periodic frequency. If not, that dataset is a <span class="bad">fail</span>.</li>
         </ol>
       </div>
-
       <div class="panel">
         <h3>Technical Protocol (Specialists)</h3>
         <ol>
           <li><strong>Targets</strong> (choose ≥1; mixing across domains encouraged):
             <ul>
-              <li><em>GW timing:</em> LIGO/Virgo event catalogs (inter-event intervals, cumulative counts vs. time).</li>
-              <li><em>Cosmology:</em> galaxy clustering / BAO residuals for log-periodic modulations.</li>
-              <li><em>Metrology:</em> long-baseline atomic clock drift / frequency stability time series (NIST/others).</li>
-              <li><em>Neuro:</em> open EEG datasets (OpenNeuro, PhysioNet) for wide-band log-periodic structure beyond canonical bands.</li>
+              <li><em>GW timing:</em> LIGO/Virgo event catalogs.</li>
+              <li><em>Cosmology:</em> galaxy clustering / BAO residuals.</li>
+              <li><em>Metrology:</em> atomic clock drift / frequency stability time series.</li>
+              <li><em>Neuro:</em> open EEG datasets for wide-band log-periodic structure.</li>
             </ul>
           </li>
           <li><strong>Signal model</strong>:
             <div class="callout">
-              Fit on log-time or log-scale: <code>x(t) = A + Σ B_k · cos(ω · log(t) + φ_k)</code> with k = 1..K (usually K=1–2).<br>
-              Alternative: continuous wavelet transform with log-spaced center frequencies; test for stationary peaks in log-frequency.
+              Fit on log-time or log-scale: <code>x(t) = A + Σ B_k · cos(ω · log(t) + φ_k)</code>.
             </div>
           </li>
           <li><strong>Nulls & surrogates</strong>:
             <ul>
-              <li>Interval shuffles / phase randomization preserving marginal spectra.</li>
-              <li>1/f<sup>α</sup> colored-noise nulls matched to empirical α.</li>
-              <li>Calendar/systematics nulls (for clocks/EEG), detector uptime nulls (for GW).</li>
+              <li>Interval shuffles / phase randomization.</li>
+              <li>1/f<sup>α</sup> colored-noise nulls.</li>
+              <li>Systematic nulls (calendar, detector uptime, etc.).</li>
             </ul>
           </li>
           <li><strong>Statistics</strong>:
             <ul>
-              <li>Peak-finding in log-frequency; permutation p-values with FDR control.</li>
-              <li>Bayes factor: log-periodic model vs. null (AIC/BIC as quick screen; full evidence if desired).</li>
-              <li>Cross-domain consistency: do candidate <code>ω*</code> values cluster (within tolerance) across independent domains?</li>
+              <li>Peak-finding in log-frequency; permutation p-values.</li>
+              <li>Bayes factor: log-periodic vs. null.</li>
+              <li>Cross-domain consistency test.</li>
             </ul>
           </li>
-          <li><strong>Pre-registration</strong> recommended before running analyses.</li>
           <li><strong>Decision rule (falsifiable)</strong>:
             <ul>
-              <li class="bad">Falsify if: no domain shows significant log-periodic peaks beyond nulls <em>or</em> discovered peaks are mutually inconsistent across domains.</li>
-              <li class="ok">Survives if: ≥2 independent domains show significant peaks aligning to a common log-frequency band (pre-specified tolerance), replicable by external teams.</li>
+              <li class="bad">Falsify if: no domain shows significant peaks beyond nulls or discovered peaks are inconsistent.</li>
+              <li class="ok">Survives if: ≥2 domains show consistent peaks replicable by external teams.</li>
             </ul>
           </li>
         </ol>
       </div>
-
-      <p class="meta">Note: This is a hypothesis. The above criteria are intentionally strict so it can be <em>proven wrong</em>. If it passes, that’s newsworthy; if it fails, we’ve learned.</p>
+      <p class="meta">Note: This is a hypothesis. Criteria are strict so it can be <em>proven wrong</em>.</p>
     </div>
   </section>
 
@@ -148,11 +143,11 @@
       <h2>Reproducibility Checklist</h2>
       <div class="panel">
         <ul>
-          <li>Share code and exact versions (include <code>requirements.txt</code> or <code>environment.yml</code>).</li>
-          <li>Provide raw data source links and preprocessing scripts.</li>
-          <li>Document all hyperparameters (windows, detrending, epoch choice, null generation).</li>
-          <li>Release a container (Docker) or notebook that reproduces all figures from a one-click run.</li>
-          <li>Include a short <em>Negative Control</em> section showing failure on randomized/synthetic controls.</li>
+          <li>Share code and exact versions.</li>
+          <li>Provide raw data source links.</li>
+          <li>Document all hyperparameters.</li>
+          <li>Release a container or notebook.</li>
+          <li>Include a Negative Control section.</li>
         </ul>
       </div>
     </div>
