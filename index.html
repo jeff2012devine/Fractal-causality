@@ -2,87 +2,65 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <title>Fractal Causality v3.2 — J.M. Devine</title>
+  <title>Fractal Causality v3.2 — Working Scaffold & Test Guide</title>
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <meta name="color-scheme" content="dark" />
   <style>
     :root{
-      --bg:#0b0b0d;
-      --panel:#111216;
-      --ink:#e5e7eb;
-      --muted:#9ca3af;
-      --line:#1f2937;
-      --accent:#38bdf8;
+      --bg:#0b0b0d; --panel:#111216; --ink:#e5e7eb; --muted:#9ca3af;
+      --line:#1f2937; --accent:#38bdf8; --accent2:#7dd3fc; --good:#34d399; --warn:#f59e0b; --bad:#ef4444;
     }
-    *{box-sizing:border-box}
-    html,body{margin:0;height:100%}
-    body{
-      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-      background:var(--bg); color:var(--ink); line-height:1.6;
-    }
-    a{color:var(--accent); text-decoration:none}
-    a:hover{color:#7dd3fc}
-    header{padding:56px 24px; background:linear-gradient(180deg,#0c0d11 0%, #0b0b0d 100%); border-bottom:1px solid var(--line)}
-    .wrap{max-width: 960px; margin:0 auto}
-    h1{margin:0 0 10px; font-size:34px; letter-spacing:.2px}
-    .meta{color:var(--muted); margin:4px 0 18px; font-size:15px}
-    .badge img{height:24px; opacity:.9}
-    .badge img:hover{opacity:1}
-    section{padding:32px 24px; border-bottom:1px solid var(--line); background:var(--bg)}
-    h2{margin:0 0 12px; font-size:22px}
-    .files a{
-      display:block; padding:14px 14px; margin:10px 0;
-      border:1px solid var(--line); border-radius:10px;
-      background:var(--panel); color:var(--ink);
-      transition:transform .08s ease, border-color .15s ease, box-shadow .15s ease;
-    }
-    .files a:hover{
-      transform: translateY(-1px);
-      border-color:#334155;
-      box-shadow: 0 6px 18px rgba(0,0,0,.35);
-    }
-    footer{padding:24px; color:var(--muted); font-size:14px; border-top:1px solid var(--line); background:var(--bg)}
-    @media (max-width:600px){
-      header{padding:40px 18px}
-      h1{font-size:28px}
-      .meta{font-size:14px}
-      .files a{padding:13px}
-    }
+    *{box-sizing:border-box} html,body{margin:0;height:100%}
+    body{font-family:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6}
+    a{color:var(--accent);text-decoration:none} a:hover{color:var(--accent2)}
+    header{padding:56px 24px;background:linear-gradient(180deg,#0c0d11 0%, #0b0b0d 100%);border-bottom:1px solid var(--line)}
+    .wrap{max-width: 980px; margin:0 auto}
+    h1{margin:0 0 10px;font-size:34px;letter-spacing:.2px}
+    h2{margin:0 0 12px;font-size:22px} h3{margin:18px 0 8px;font-size:18px}
+    .meta{color:var(--muted);margin:6px 0 18px;font-size:15px}
+    .badge img{height:24px;opacity:.9} .badge img:hover{opacity:1}
+    section{padding:32px 24px;border-bottom:1px solid var(--line);background:var(--bg)}
+    .panel{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:16px 16px}
+    .files a{display:block;padding:14px 14px;margin:10px 0;border:1px solid var(--line);border-radius:10px;background:var(--panel);color:var(--ink);transition:transform .08s ease,border-color .15s ease,box-shadow .15s ease}
+    .files a:hover{transform:translateY(-1px);border-color:#334155;box-shadow:0 6px 18px rgba(0,0,0,.35)}
+    .callout{border-left:4px solid var(--accent); padding:10px 12px; background:#0f1116; border-radius:8px}
+    code,kbd{font-family:ui-monospace,Menlo,Consolas,monospace;background:#0f1116;border:1px solid #1f2937;border-radius:6px;padding:0 6px}
+    .ok{color:var(--good)} .warn{color:var(--warn)} .bad{color:var(--bad)}
+    footer{padding:24px;color:var(--muted);font-size:14px;border-top:1px solid var(--line);background:var(--bg)}
+    @media (max-width:680px){header{padding:40px 18px} h1{font-size:28px} .meta{font-size:14px} .files a{padding:13px}}
   </style>
 </head>
 <body>
   <header>
     <div class="wrap">
-      <h1>Fractal Causality v3.2 — Flagship Release</h1>
+      <h1>Fractal Causality v3.2 — Working Scaffold for Testing</h1>
       <div class="meta">
-        Author: J.M. Devine •
-        DOI: <a href="https://doi.org/10.5281/zenodo.17214354">10.5281/zenodo.17214354</a> •
-        Date: September 2025 •
-        <a href="https://fractalcausalityloe.com">fractalcausalityloe.com</a>
+        Author: J.M. Devine • DOI: <a href="https://doi.org/10.5281/zenodo.17214354">10.5281/zenodo.17214354</a> •
+        Date: September 2025 • <a href="https://fractalcausalityloe.com">fractalcausalityloe.com</a>
       </div>
       <a class="badge" href="https://doi.org/10.5281/zenodo.17214354">
         <img alt="DOI" src="https://zenodo.org/badge/DOI/10.5281/zenodo.17214354.svg">
       </a>
+      <div class="callout" style="margin-top:14px">
+        <strong>Purpose:</strong> This page presents <em>Fractal Causality</em> as a <strong>testable hypothesis</strong> and a <strong>reproducible scaffold</strong>.
+        It is <u>not</u> a final theory. Below are clear, falsifiable predictions and step-by-step testing instructions.
+      </div>
     </div>
   </header>
 
   <section>
     <div class="wrap">
-      <h2>Plain-Language Introduction</h2>
+      <h2>Plain-Language Summary</h2>
       <p>
-        Fractal Causality is a hypothesis that the universe carries a hidden rhythm — a repeating log-periodic pattern —
-        that appears across multiple scales. From the clustering of galaxies, to the hum of gravitational waves and atomic
-        clocks, to predictive signals in the human brain, the model proposes that a single underlying “oscillator” leaves
-        its fingerprints everywhere.
-      </p>
-      <p>
-        Version 3.2 formalizes this into a testable framework with precise equations, falsifiability criteria, and
-        reproducibility protocols.
+        The hypothesis: the universe carries a hidden rhythm — a repeating <em>log-periodic</em> pattern — that shows up across scales.
+        From galaxy clustering to gravitational-wave event timing, atomic-clock drift, and even brain signals, the claim is that a single
+        underlying “oscillator” may leave consistent fingerprints. The goal here is simple: <strong>look for those fingerprints</strong>.
+        If they’re not there, the hypothesis fails.
       </p>
     </div>
   </section>
 
-  <section>
+  <section id="downloads">
     <div class="wrap">
       <h2>Download</h2>
       <div class="files">
@@ -91,14 +69,104 @@
         <a href="fractalcausality_v3.2_part2.pdf">Technical Supplement — Part 2 (PDF)</a>
         <a href="fractalcausality_v3.2_flagship.zip">♾️ The Infinity Bundle (Complete v3.2 Package)</a>
       </div>
+      <p class="meta">Tip: the Infinity Bundle contains both PDFs plus checksums for verification.</p>
     </div>
   </section>
 
-  <section>
+  <section id="how-to-test">
+    <div class="wrap">
+      <h2>How to Test the Hypothesis</h2>
+
+      <div class="panel" style="margin-bottom:14px">
+        <h3>Quick Test (Data-curious / Non-specialist)</h3>
+        <ol>
+          <li>Pick a time-stamped dataset (e.g., public gravitational-wave event times, long atomic-clock drift series, or open EEG).</li>
+          <li>Transform time to <code>log(t)</code> (choose a sensible epoch; sensitivity analysis below).</li>
+          <li>Fit a simple model <code>X(t) = A + B·cos(ω·log(t) + φ)</code> and scan for <code>ω</code> with Lomb–Scargle or FFT on log-time.</li>
+          <li>Generate <em>surrogate</em> series (phase-randomized / shuffled intervals) and repeat.</li>
+          <li>If the real data’s peak power at some <code>ω*</code> <em>consistently</em> exceeds surrogates (p&lt;0.01 after multiple-test correction),
+              you’ve found a candidate log-periodic frequency. If not, that dataset is a <span class="bad">fail</span>.</li>
+        </ol>
+      </div>
+
+      <div class="panel">
+        <h3>Technical Protocol (Specialists)</h3>
+        <ol>
+          <li><strong>Targets</strong> (choose ≥1; mixing across domains is encouraged):
+            <ul>
+              <li><em>GW timing:</em> LIGO/Virgo event catalogs (inter-event intervals, cumulative counts vs. time).</li>
+              <li><em>Cosmology:</em> galaxy clustering / BAO residuals for log-periodic modulations.</li>
+              <li><em>Metrology:</em> long-baseline atomic clock drift / frequency stability time series (NIST/others).</li>
+              <li><em>Neuro:</em> open EEG datasets (OpenNeuro, PhysioNet) for wide-band log-periodic structure beyond canonical bands.</li>
+            </ul>
+          </li>
+          <li><strong>Signal model</strong> (minimal):
+            <div class="callout">
+              Fit on log-time or log-scale: <code>x(t) = A + Σ B_k · cos(ω · log(t) + φ_k)</code> with k = 1..K (usually K=1–2).<br>
+              Alternative: continuous wavelet transform with log-spaced center frequencies; test for stationary peaks in log-frequency.
+            </div>
+          </li>
+          <li><strong>Nulls & surrogates</strong>:
+            <ul>
+              <li>Interval shuffles / phase randomization preserving marginal spectra.</li>
+              <li>1/f<sup>α</sup> colored-noise nulls matched to empirical α.</li>
+              <li>Calendar/systematics nulls (for clocks/EEG), detector uptime nulls (for GW).</li>
+            </ul>
+          </li>
+          <li><strong>Statistics</strong>:
+            <ul>
+              <li>Peak-finding in log-frequency; permutation p-values with FDR control.</li>
+              <li>Bayes factor: log-periodic model vs. null (AIC/BIC as quick screen; full evidence if desired).</li>
+              <li>Cross-domain consistency: do candidate <code>ω*</code> values cluster (within tolerance) across independent domains?</li>
+            </ul>
+          </li>
+          <li><strong>Pre-registration</strong> (recommended): lock analysis choices (epoch, transforms, windows, nulls) before running.</li>
+          <li><strong>Calibration locks</strong>: share code + random seeds; release “frozen” container (Docker) to ensure reproducibility.</li>
+          <li><strong>Decision rule (falsifiable)</strong>:
+            <ul>
+              <li class="bad">Falsify if: no domain shows significant log-periodic peaks beyond nulls <em>or</em> discovered peaks are mutually inconsistent across domains.</li>
+              <li class="ok">Survives if: ≥2 independent domains show significant peaks aligning to a common log-frequency band (pre-specified tolerance), replicable by external teams.</li>
+            </ul>
+          </li>
+        </ol>
+      </div>
+
+      <p class="meta">Note: This is a hypothesis. The above criteria are intentionally strict so it can be <em>proven wrong</em>. If it passes, that’s newsworthy; if it fails, we’ve learned.</p>
+    </div>
+  </section>
+
+  <section id="repro">
+    <div class="wrap">
+      <h2>Reproducibility Checklist</h2>
+      <div class="panel">
+        <ul>
+          <li>Share code and exact versions (include <code>requirements.txt</code> or <code>environment.yml</code>).</li>
+          <li>Provide raw data source links and preprocessing scripts.</li>
+          <li>Document all hyperparameters (windows, detrending, epoch choice, null generation).</li>
+          <li>Release a container (Docker) or notebook that reproduces all figures from a one-click run.</li>
+          <li>Include a short <em>Negative Control</em> section showing failure on randomized/synthetic controls.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="position">
+    <div class="wrap">
+      <h2>Positioning (Why This Isn’t “Vague”)</h2>
+      <div class="panel">
+        <p>
+          This project is a <strong>scaffold</strong> for testing a unifying rhythmic pattern. It makes <em>specific</em>,
+          <em>falsifiable</em> predictions about log-periodic structure that should appear — or fail to appear — in real data.
+          It does not claim finished theory; it invites verification or refutation.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="cite">
     <div class="wrap">
       <h2>Citation</h2>
-      <p>
-        Devine, J.M. (2025). <em>Fractal Causality v3.2 (Flagship Release)</em>. Zenodo.
+      <p>Devine, J.M. (2025). <em>Fractal Causality v3.2 (Working Scaffold & Test Guide)</em>. Zenodo.
         <a href="https://doi.org/10.5281/zenodo.17214354">https://doi.org/10.5281/zenodo.17214354</a>
       </p>
     </div>
@@ -106,7 +174,8 @@
 
   <footer>
     <div class="wrap">
-      © 2025 J.M. Devine • This site is published via GitHub Pages. DOI: 10.5281/zenodo.17214354
+      © 2025 J.M. Devine • Fractal Causality™ • Law of Expansion™ • Continuous Quantum Bursts™<br/>
+      ♾️ The Infinity Bundle • We have planted our flag on the moon — the Observer has arrived.
     </div>
   </footer>
 </body>
