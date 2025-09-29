@@ -1,67 +1,138 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>fractal causality v3.3 — j.m. devine</title>
-  <meta name="description" content="Fractal Causality v3.3 — a bounce–holographic–conformal cosmology by J.M. Devine. Whitepaper, ReadMe, References, and Infinity Bundle PDF.">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Fractal Causality — v3.3</title>
+  <meta name="description" content="Fractal Causality v3.3 — A bounce–holographic–conformal cosmology with testable predictions across CMB, LSS, GWs, and 21 cm." />
+  <meta property="og:title" content="Fractal Causality — v3.3" />
+  <meta property="og:description" content="A bounce–holographic–conformal cosmology with testable predictions across CMB, LSS, GWs, and 21 cm." />
+  <meta property="og:type" content="website" />
   <style>
-    :root { --w: 920px; --fg:#111; --sub:#444; --muted:#666; --bg:#fff; --line:#e9e9e9; }
-    * { box-sizing: border-box; }
-    body { margin:0; font-family: system-ui, sans-serif; background: var(--bg); color: var(--fg); line-height:1.6; }
-    a { color: var(--fg); }
-    header { padding: 48px 16px 20px; text-align:center; border-bottom:1px solid var(--line); }
-    header h1 { margin:0 0 8px; font-size:28px; }
-    header p.meta { margin:4px 0; color:var(--sub); font-size:14px; }
-    main { max-width: var(--w); margin:28px auto 80px; padding:0 16px; }
-    .btn { display:inline-block; padding:12px 16px; border:1px solid var(--fg); text-decoration:none; color:var(--fg); border-radius:10px; font-weight:600; margin:6px 4px; }
-    .btn:hover { background:var(--fg); color:#fff; }
-    section { margin:34px 0; }
-    h2 { font-size:22px; margin:0 0 10px; }
-    h3 { font-size:16px; margin:18px 0 8px; text-transform: uppercase; }
-    .refs ol { padding-left:22px; }
-    footer { max-width: var(--w); margin:24px auto 80px; padding:0 16px; font-size:13px; color:var(--muted); border-top:1px solid var(--line); padding-top:18px; }
+    :root{
+      --bg:#0b0b0c;--card:#131316;--ink:#e8e8ea;--muted:#a8a8ae;
+      --accent:#7dd3fc;--accent2:#a78bfa;--border:#222226;
+      --code:#0f172a;--code-ink:#e5e7eb
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);
+      font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,"Noto Sans"}
+    a{color:var(--accent);text-decoration:none}
+    a:hover{text-decoration:underline}
+    header{padding:56px 20px 24px;text-align:center}
+    .wrap{max-width:980px;margin:0 auto;padding:0 20px 64px}
+    .title{font-size:clamp(28px,4vw,40px);font-weight:700;letter-spacing:.2px}
+    .subtitle{color:var(--muted);margin-top:6px}
+    .badge-row{margin-top:18px;display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+    .badge{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border:1px solid var(--border);
+      border-radius:10px;background:linear-gradient(180deg,#16161a,#0f0f12);color:var(--ink);font-size:14px}
+    .badge .dot{width:10px;height:10px;border-radius:50%;background:radial-gradient(circle at 30% 30%,var(--accent),var(--accent2))}
+    .grid{display:grid;grid-template-columns:1fr;gap:18px;margin-top:28px}
+    @media (min-width:840px){.grid{grid-template-columns:1.1fr .9fr}}
+    .card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:22px}
+    h2{margin:0 0 8px;font-size:22px}
+    h3{margin:24px 0 10px;font-size:18px}
+    p{margin:10px 0}
+    .muted{color:var(--muted)}
+    .kicker{text-transform:uppercase;letter-spacing:.14em;font-size:12px;color:var(--muted)}
+    .list{margin:10px 0 0 18px;padding:0}
+    .list li{margin:6px 0}
+    .downloads a{display:inline-flex;align-items:center;gap:10px;padding:10px 12px;margin:8px 10px 0 0;
+      border:1px solid var(--border);background:#0e0e11;border-radius:10px}
+    .downloads a:hover{border-color:#2a2a31;text-decoration:none}
+    .mono{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,"Courier New",monospace;background:var(--code);
+      color:var(--code-ink);padding:1px 6px;border-radius:6px;border:1px solid #0b1020}
+    .codeblock{background:var(--code);color:var(--code-ink);padding:14px;border-radius:10px;border:1px solid #0b1020;overflow-x:auto}
+    footer{color:var(--muted);text-align:center;padding:40px 20px 60px}
+    .hr{height:1px;background:linear-gradient(90deg,transparent,#1e1e25,transparent);border:0;margin:24px 0}
   </style>
 </head>
 <body>
   <header>
-    <h1>fractal causality: a bounce–holographic–conformal cosmology (v3.3)</h1>
-    <p class="meta">author: j.m. devine &nbsp;|&nbsp; doi: <a href="https://doi.org/10.5281/zenodo.17148490" target="_blank">10.5281/zenodo.17148490</a></p>
-    <a class="btn" href="infinity_bundle_v3.3.pdf">download infinity bundle (pdf)</a>
-    <a class="btn" href="fractal_causality_v3.3_whitepaper.md">whitepaper (markdown)</a>
-    <a class="btn" href="readme.md">readme</a>
+    <div class="title">Fractal Causality: A Bounce–Holographic–Conformal Cosmology</div>
+    <div class="subtitle">Author: <strong>J.M. Devine</strong> · Version: <strong>v3.3</strong></div>
+    <div class="badge-row">
+      <span class="badge"><span class="dot"></span> DOI: <strong class="mono">10.5281/zenodo.17221015</strong></span>
+      <span class="badge">License: <strong>CC BY 4.0</strong></span>
+    </div>
   </header>
 
-  <main>
-    <section>
-      <h2>overview</h2>
-      <p><em>fractal causality</em> proposes that black holes are not endpoints but transformation chambers where holographically stored information undergoes a loop-quantum-gravity bounce and a conformal flip, re-seeding new expansion with structured initial conditions. version 3.3 provides a minimal mathematical model, stability criteria, and falsifiable predictions across cmb, lss, gws, and 21 cm cosmology.</p>
+  <main class="wrap">
+    <section class="grid">
+      <article class="card">
+        <div class="kicker">Abstract</div>
+        <p><em>Fractal Causality™</em> proposes the universe is a self-similar, cyclical process in which local collapses seed new expansions. Black holes act as transformation chambers where holographically stored information undergoes a loop-quantum-gravity–style bounce and a conformal flip, re-expressing compressed 2D data as new 3D initial conditions. This release presents a minimal mathematical model, stability criteria, and falsifiable predictions for the CMB, large-scale structure, gravitational waves, and 21 cm surveys.</p>
+
+        <h3>Author’s Note</h3>
+        <p>This work is offered as an open hypothesis—a bridge between physics, mathematics, and meaning. Developed outside traditional institutions, it leans not on biography, but on mathematics, consistency, and evidence. Engage with the model, test its claims, and challenge its implications.</p>
+
+        <hr class="hr" />
+        <h3>Downloads</h3>
+        <div class="downloads">
+          <a href="whitepaper_part1_core_model_v3.3.pdf" download>📄 Part I — Core Model (PDF)</a>
+          <a href="whitepaper_part2_derivations_v3.3.pdf" download>📄 Part II — Derivations &amp; Implementation (PDF)</a>
+          <a href="whitepaper_part3_tests_refs_v3.3.pdf" download>📄 Part III — Falsifiability, Testing &amp; References (PDF)</a>
+          <a href="infinity_bundle_v3.3.pdf" download>🗂️ Infinity Bundle (All-in-One PDF)</a>
+        </div>
+      </article>
+
+      <aside class="card">
+        <div class="kicker">Quick Start</div>
+        <h2>How to Test the Model</h2>
+        <ul class="list">
+          <li><strong>CMB:</strong> jointly fit <span class="mono">n_s</span>, <span class="mono">f_NL</span>, and <span class="mono">r</span>; check predicted correlations and low-ℓ anomalies.</li>
+          <li><strong>LSS:</strong> search for log-periodic oscillations in <span class="mono">P(k)</span> and small BAO shifts (10⁻⁴–10⁻³).</li>
+          <li><strong>GWs:</strong> target a stochastic background detectable by LISA for <span class="mono">r ≥ 0.03</span>, slope <span class="mono">n_t ≈ 3 − α</span>.</li>
+          <li><strong>21 cm:</strong> test for oscillatory features <span class="mono">ΔP/P ~ 10⁻³</span> at <span class="mono">z ~ 10–20</span> (SKA).</li>
+          <li><strong>Halo demographics:</strong> look for clustering excess at <span class="mono">10¹³–10¹⁵ M☉</span>.</li>
+        </ul>
+        <p class="muted">Decision rule: ≥2 confirmations → strong evidence; any hard falsifier → revise; mixed → refine parameters.</p>
+      </aside>
     </section>
 
-    <section class="refs">
-      <h2>references</h2>
-      <ol>
-        <li>Bojowald, M. (2001). Absence of Singularity in Loop Quantum Cosmology. <em>Phys. Rev. Lett.</em>, 86, 5227–5230. <a href="https://doi.org/10.1103/PhysRevLett.86.5227">doi:10.1103/PhysRevLett.86.5227</a></li>
-        <li>Ashtekar, A., Pawlowski, T., & Singh, P. (2006). Quantum Nature of the Big Bang. <em>Phys. Rev. Lett.</em>, 96, 141301. <a href="https://doi.org/10.1103/PhysRevLett.96.141301">doi:10.1103/PhysRevLett.96.141301</a></li>
-        <li>Penrose, R. (2010). <em>Cycles of Time</em>. Bodley Head.</li>
-        <li>’t Hooft, G. (1993). Dimensional Reduction in Quantum Gravity. arXiv:gr-qc/9310026.</li>
-        <li>Susskind, L. (1995). The World as a Hologram. <em>J. Math. Phys.</em>, 36, 6377. <a href="https://doi.org/10.1063/1.531249">doi:10.1063/1.531249</a></li>
-        <li>Maldacena, J. (1998). The Large N Limit of Superconformal Field Theories and Supergravity. <em>Adv. Theor. Math. Phys.</em>, 2, 231–252.</li>
-        <li>Planck Collaboration (2020). Planck 2018 results. VI. Cosmological parameters. <em>Astron. Astrophys.</em>, 641, A6. <a href="https://doi.org/10.1051/0004-6361/201833910">doi:10.1051/0004-6361/201833910</a></li>
-        <li>Planck Collaboration (2020). Planck 2018 results. X. Constraints on inflation. <em>Astron. Astrophys.</em>, 641, A10. <a href="https://doi.org/10.1051/0004-6361/201833887">doi:10.1051/0004-6361/201833887</a></li>
-        <li>DESI Collaboration (2016). The DESI Experiment Part I: Science, Targeting, and Survey Design. arXiv:1611.00036.</li>
-        <li>Laureijs, R. et al. (2011). Euclid Definition Study Report. arXiv:1110.3193.</li>
-        <li>LSST Science Collaboration (2009). LSST Science Book, v2.0. arXiv:0912.0201.</li>
-        <li>LISA Collaboration (2017). Laser Interferometer Space Antenna. arXiv:1702.00786.</li>
-        <li>LISA Cosmology Working Group (2023). Cosmology with LISA. <em>Living Rev. Relativity</em>, 26(5). <a href="https://doi.org/10.1007/s41114-023-00041-4">doi:10.1007/s41114-023-00041-4</a></li>
-        <li>SKA Cosmology SWG (2020). Cosmology with Phase 1 of the SKA. <em>PASA</em>, 37, e007. <a href="https://doi.org/10.1017/pasa.2019.51">doi:10.1017/pasa.2019.51</a></li>
+    <section class="card" id="outline">
+      <div class="kicker">Contents</div>
+      <h2>Whitepaper Outline (v3.3)</h2>
+      <ol class="list">
+        <li><strong>Part I — The Core Model:</strong> Bounce + conformal flip; horizon data → initial conditions; mass–spectrum relations; stability constraints.</li>
+        <li><strong>Part II — Derivations &amp; Implementation:</strong> Observational discriminants; numerical bounce; refined predictions; stability analysis.</li>
+        <li><strong>Part III — Falsifiability &amp; Testing:</strong> Vulnerable predictions; smoking-gun signals; practical testing guide; references.</li>
       </ol>
-      <p class="meta">all references are inlined here for github pages compatibility.</p>
+    </section>
+
+    <section class="card" id="references">
+      <div class="kicker">References</div>
+      <h2>Selected Bibliography</h2>
+      <ol class="list">
+        <li>Bojowald, M. (2001). Absence of Singularity in Loop Quantum Cosmology. <em>Phys. Rev. Lett.</em> 86, 5227–5230. doi:10.1103/PhysRevLett.86.5227</li>
+        <li>Ashtekar, A., Pawlowski, T., &amp; Singh, P. (2006). Quantum Nature of the Big Bang. <em>Phys. Rev. Lett.</em> 96, 141301. doi:10.1103/PhysRevLett.96.141301</li>
+        <li>Penrose, R. (2010). <em>Cycles of Time</em>. Bodley Head.</li>
+        <li>’t Hooft, G. (1993). Dimensional Reduction in Quantum Gravity. arXiv:gr-qc/9310026</li>
+        <li>Susskind, L. (1995). The World as a Hologram. <em>J. Math. Phys.</em> 36, 6377. doi:10.1063/1.531249</li>
+        <li>Maldacena, J. (1998). The Large N Limit of Superconformal Field Theories and Supergravity. <em>Adv. Theor. Math. Phys.</em> 2, 231.</li>
+        <li>Planck Collaboration (2020). Planck 2018 results. VI. Cosmological parameters. <em>A&amp;A</em> 641, A6. doi:10.1051/0004-6361/201833910</li>
+        <li>Planck Collaboration (2020). Planck 2018 results. X. Constraints on inflation. <em>A&amp;A</em> 641, A10. doi:10.1051/0004-6361/201833887</li>
+        <li>DESI Collaboration (2016). The DESI Experiment Part I: Science, Targeting, and Survey Design. arXiv:1611.00036</li>
+        <li>Laureijs, R. et al. (2011). Euclid Definition Study Report. arXiv:1110.3193</li>
+        <li>LSST Science Collaboration (2009). LSST Science Book, v2.0. arXiv:0912.0201</li>
+        <li>Amaro-Seoane, P. et al. (2017). LISA. arXiv:1702.00786</li>
+        <li>LISA Cosmology Working Group (2023). Cosmology with LISA. <em>Living Reviews in Relativity</em> 26, 5. doi:10.1007/s41114-023-00041-4</li>
+        <li>SKA Cosmology SWG (2020). Cosmology with Phase 1 of the SKA. <em>PASA</em> 37, e007. doi:10.1017/pasa.2019.51</li>
+      </ol>
+      <p class="muted">Full citations are also embedded in the Part III PDF.</p>
+    </section>
+
+    <section class="card" id="citation">
+      <div class="kicker">Cite</div>
+      <h2>How to Cite</h2>
+      <div class="codeblock"><code>
+Devine, J.M. (2025). Fractal Causality: A Bounce–Holographic–Conformal Cosmology (v3.3). Zenodo. https://doi.org/10.5281/zenodo.17221015
+      </code></div>
     </section>
   </main>
 
   <footer>
-    <p>© j.m. devine — fractal causality v3.3</p>
+    © 2025 J.M. Devine · Fractal Causality™ · DOI <span class="mono">10.5281/zenodo.17221015</span>
   </footer>
 </body>
 </html>
