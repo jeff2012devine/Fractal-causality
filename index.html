@@ -1,188 +1,67 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <title>Fractal Causality v3.2 — Working Scaffold & Test Guide</title>
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <meta name="color-scheme" content="dark" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>fractal causality v3.3 — j.m. devine</title>
+  <meta name="description" content="Fractal Causality v3.3 — a bounce–holographic–conformal cosmology by J.M. Devine. Whitepaper, ReadMe, References, and Infinity Bundle PDF.">
   <style>
-    :root{
-      --bg:#0b0b0d; --panel:#111216; --ink:#e5e7eb; --muted:#9ca3af;
-      --line:#1f2937; --accent:#38bdf8; --accent2:#7dd3fc; --good:#34d399; --warn:#f59e0b; --bad:#ef4444;
-    }
-    *{box-sizing:border-box} html,body{margin:0;height:100%}
-    body{font-family:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6}
-    a{color:var(--accent);text-decoration:none} a:hover{color:var(--accent2)}
-    header{padding:56px 24px;background:linear-gradient(180deg,#0c0d11 0%, #0b0b0d 100%);border-bottom:1px solid var(--line)}
-    .wrap{max-width: 980px; margin:0 auto}
-    h1{margin:0 0 10px;font-size:34px;letter-spacing:.2px}
-    h2{margin:0 0 12px;font-size:22px} h3{margin:18px 0 8px;font-size:18px}
-    .meta{color:var(--muted);margin:6px 0 18px;font-size:15px}
-    .badge img{height:24px;opacity:.9} .badge img:hover{opacity:1}
-    section{padding:32px 24px;border-bottom:1px solid var(--line);background:var(--bg)}
-    .panel{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:16px 16px}
-    .files a{display:block;padding:14px 14px;margin:10px 0;border:1px solid var(--line);border-radius:10px;background:var(--panel);color:var(--ink);transition:transform .08s ease,border-color .15s ease,box-shadow .15s ease}
-    .files a:hover{transform:translateY(-1px);border-color:#334155;box-shadow:0 6px 18px rgba(0,0,0,.35)}
-    .callout{border-left:4px solid var(--accent); padding:10px 12px; background:#0f1116; border-radius:8px}
-    code,kbd{font-family:ui-monospace,Menlo,Consolas,monospace;background:#0f1116;border:1px solid #1f2937;border-radius:6px;padding:0 6px}
-    .ok{color:var(--good)} .warn{color:var(--warn)} .bad{color:var(--bad)}
-    footer{padding:24px;color:var(--muted);font-size:14px;border-top:1px solid var(--line);background:var(--bg)}
-    @media (max-width:680px){header{padding:40px 18px} h1{font-size:28px} .meta{font-size:14px} .files a{padding:13px}}
+    :root { --w: 920px; --fg:#111; --sub:#444; --muted:#666; --bg:#fff; --line:#e9e9e9; }
+    * { box-sizing: border-box; }
+    body { margin:0; font-family: system-ui, sans-serif; background: var(--bg); color: var(--fg); line-height:1.6; }
+    a { color: var(--fg); }
+    header { padding: 48px 16px 20px; text-align:center; border-bottom:1px solid var(--line); }
+    header h1 { margin:0 0 8px; font-size:28px; }
+    header p.meta { margin:4px 0; color:var(--sub); font-size:14px; }
+    main { max-width: var(--w); margin:28px auto 80px; padding:0 16px; }
+    .btn { display:inline-block; padding:12px 16px; border:1px solid var(--fg); text-decoration:none; color:var(--fg); border-radius:10px; font-weight:600; margin:6px 4px; }
+    .btn:hover { background:var(--fg); color:#fff; }
+    section { margin:34px 0; }
+    h2 { font-size:22px; margin:0 0 10px; }
+    h3 { font-size:16px; margin:18px 0 8px; text-transform: uppercase; }
+    .refs ol { padding-left:22px; }
+    footer { max-width: var(--w); margin:24px auto 80px; padding:0 16px; font-size:13px; color:var(--muted); border-top:1px solid var(--line); padding-top:18px; }
   </style>
 </head>
 <body>
   <header>
-    <div class="wrap">
-      <h1>Fractal Causality v3.2 — Working Scaffold for Testing</h1>
-      <div class="meta">
-        Author: J.M. Devine • DOI: <a href="https://doi.org/10.5281/zenodo.17214354">10.5281/zenodo.17214354</a> •
-        Date: September 2025 • <a href="https://fractalcausalityloe.com">fractalcausalityloe.com</a>
-      </div>
-      <a class="badge" href="https://doi.org/10.5281/zenodo.17214354">
-        <img alt="DOI" src="https://zenodo.org/badge/DOI/10.5281/zenodo.17214354.svg">
-      </a>
-    </div>
+    <h1>fractal causality: a bounce–holographic–conformal cosmology (v3.3)</h1>
+    <p class="meta">author: j.m. devine &nbsp;|&nbsp; doi: <a href="https://doi.org/10.5281/zenodo.17148490" target="_blank">10.5281/zenodo.17148490</a></p>
+    <a class="btn" href="infinity_bundle_v3.3.pdf">download infinity bundle (pdf)</a>
+    <a class="btn" href="fractal_causality_v3.3_whitepaper.md">whitepaper (markdown)</a>
+    <a class="btn" href="readme.md">readme</a>
   </header>
 
-  <section id="summary">
-    <div class="wrap">
-      <h2>Plain-Language Summary</h2>
-      <p>
-        The hypothesis: the universe carries a hidden rhythm — a repeating <em>log-periodic</em> pattern — that shows up across scales.
-        From galaxy clustering to gravitational-wave event timing, atomic-clock drift, and even brain signals, the claim is that a single
-        underlying “oscillator” may leave consistent fingerprints. The goal here is simple: <strong>look for those fingerprints</strong>.
-        If they’re not there, the hypothesis fails.
-      </p>
-    </div>
-  </section>
+  <main>
+    <section>
+      <h2>overview</h2>
+      <p><em>fractal causality</em> proposes that black holes are not endpoints but transformation chambers where holographically stored information undergoes a loop-quantum-gravity bounce and a conformal flip, re-seeding new expansion with structured initial conditions. version 3.3 provides a minimal mathematical model, stability criteria, and falsifiable predictions across cmb, lss, gws, and 21 cm cosmology.</p>
+    </section>
 
-  <section id="purpose">
-    <div class="wrap">
-      <div class="callout" style="margin-top:14px">
-        <strong>Purpose:</strong> This page presents <em>Fractal Causality</em> as a <strong>testable hypothesis</strong> and a <strong>reproducible scaffold</strong>.
-        It is <u>not</u> a final theory. Below is a falsifiable prediction.
-      </div>
-      <div class="callout" style="margin-top:14px;background:#102; border-left-color:#34d399;">
-        <strong>Headline Prediction:</strong> If Fractal Causality is true, then <em>independent datasets</em> — galaxy distributions, gravitational-wave event timing,
-        long-baseline atomic-clock drift, and EEG signals — will exhibit a <u>common log-periodic frequency band</u> within a pre-specified tolerance.
-        If no such band appears across ≥2 independent domains under the same analysis, the hypothesis is <span class="bad">falsified</span>.
-      </div>
-    </div>
-  </section>
-
-  <section id="downloads">
-    <div class="wrap">
-      <h2>Download</h2>
-      <div class="files">
-        <a href="readme_fc_v3.2.pdf">Readme — Plain-Language Intro (PDF)</a>
-        <a href="fractalcausality_v3.2_part1.pdf">Thesis (Core) — Part 1 (PDF)</a>
-        <a href="fractalcausality_v3.2_part2.pdf">Technical Supplement — Part 2 (PDF)</a>
-        <a href="fractalcausality_v3.2_flagship.zip">♾️ The Infinity Bundle (Complete v3.2 Package)</a>
-      </div>
-      <p class="meta">Tip: the Infinity Bundle contains both PDFs plus checksums for verification.</p>
-    </div>
-  </section>
-
-  <section id="how-to-test">
-    <div class="wrap">
-      <h2>How to Test the Hypothesis</h2>
-      <div class="panel" style="margin-bottom:14px">
-        <h3>Quick Test (Data-curious / Non-specialist)</h3>
-        <ol>
-          <li>Pick a time-stamped dataset (e.g., public gravitational-wave event times, long atomic-clock drift series, or open EEG).</li>
-          <li>Transform time to <code>log(t)</code> (choose a sensible epoch; sensitivity analysis below).</li>
-          <li>Fit <code>X(t) = A + B·cos(ω·log(t) + φ)</code> and scan for <code>ω</code> with Lomb–Scargle or FFT on log-time.</li>
-          <li>Generate <em>surrogate</em> series (phase-randomized / shuffled intervals) and repeat.</li>
-          <li>If the real data’s peak power at some <code>ω*</code> <em>consistently</em> exceeds surrogates (p&lt;0.01 after multiple-test correction),
-              you’ve found a candidate log-periodic frequency. If not, that dataset is a <span class="bad">fail</span>.</li>
-        </ol>
-      </div>
-      <div class="panel">
-        <h3>Technical Protocol (Specialists)</h3>
-        <ol>
-          <li><strong>Targets</strong> (choose ≥1; mixing across domains encouraged):
-            <ul>
-              <li><em>GW timing:</em> LIGO/Virgo event catalogs.</li>
-              <li><em>Cosmology:</em> galaxy clustering / BAO residuals.</li>
-              <li><em>Metrology:</em> atomic clock drift / frequency stability time series.</li>
-              <li><em>Neuro:</em> open EEG datasets for wide-band log-periodic structure.</li>
-            </ul>
-          </li>
-          <li><strong>Signal model</strong>:
-            <div class="callout">Fit on log-time or log-scale: <code>x(t) = A + Σ B_k · cos(ω · log(t) + φ_k)</code>.</div>
-          </li>
-          <li><strong>Nulls & surrogates</strong>:
-            <ul>
-              <li>Interval shuffles / phase randomization.</li>
-              <li>1/f<sup>α</sup> colored-noise nulls.</li>
-              <li>Systematic nulls (calendar, detector uptime, etc.).</li>
-            </ul>
-          </li>
-          <li><strong>Statistics</strong>:
-            <ul>
-              <li>Peak-finding in log-frequency; permutation p-values.</li>
-              <li>Bayes factor: log-periodic vs. null.</li>
-              <li>Cross-domain consistency test.</li>
-            </ul>
-          </li>
-          <li><strong>Decision rule (falsifiable)</strong>:
-            <ul>
-              <li class="bad">Falsify if: no domain shows significant peaks beyond nulls or discovered peaks are inconsistent.</li>
-              <li class="ok">Survives if: ≥2 domains show consistent peaks replicable by external teams.</li>
-            </ul>
-          </li>
-        </ol>
-      </div>
-      <p class="meta">Note: This is a hypothesis. Criteria are strict so it can be <em>proven wrong</em>.</p>
-    </div>
-  </section>
-
-  <section id="repro">
-    <div class="wrap">
-      <h2>Reproducibility Checklist</h2>
-      <div class="panel">
-        <ul>
-          <li>Share code and exact versions.</li>
-          <li>Provide raw data source links.</li>
-          <li>Document all hyperparameters.</li>
-          <li>Release a container or notebook.</li>
-          <li>Include a Negative Control section.</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <section id="about">
-    <div class="wrap">
-      <h2>About the Creator</h2>
-      <div class="panel">
-        <p>
-          <strong>J.M. Devine</strong> is an independent thinker with a lifelong curiosity about the cosmos. The conceptual framework of
-          <em>Fractal Causality</em> (including related ideas such as Continuous Quantum Bursts and the Law of Expansion) is his own.
-          He used AI assistance to generate <em>mathematical scaffolding</em> so the hypothesis could be tested by specialists.
-        </p>
-        <p class="meta">
-          Transparency note: This project invites verification and refutation. If the data do not support the predictions, the hypothesis should be rejected.
-          If they do, further collaboration is welcome and credit will be shared with all contributors.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <section id="cite">
-    <div class="wrap">
-      <h2>Citation</h2>
-      <p>Devine, J.M. (2025). <em>Fractal Causality v3.2 (Working Scaffold & Test Guide)</em>. Zenodo.
-        <a href="https://doi.org/10.5281/zenodo.17214354">https://doi.org/10.5281/zenodo.17214354</a>
-      </p>
-    </div>
-  </section>
+    <section class="refs">
+      <h2>references</h2>
+      <ol>
+        <li>Bojowald, M. (2001). Absence of Singularity in Loop Quantum Cosmology. <em>Phys. Rev. Lett.</em>, 86, 5227–5230. <a href="https://doi.org/10.1103/PhysRevLett.86.5227">doi:10.1103/PhysRevLett.86.5227</a></li>
+        <li>Ashtekar, A., Pawlowski, T., & Singh, P. (2006). Quantum Nature of the Big Bang. <em>Phys. Rev. Lett.</em>, 96, 141301. <a href="https://doi.org/10.1103/PhysRevLett.96.141301">doi:10.1103/PhysRevLett.96.141301</a></li>
+        <li>Penrose, R. (2010). <em>Cycles of Time</em>. Bodley Head.</li>
+        <li>’t Hooft, G. (1993). Dimensional Reduction in Quantum Gravity. arXiv:gr-qc/9310026.</li>
+        <li>Susskind, L. (1995). The World as a Hologram. <em>J. Math. Phys.</em>, 36, 6377. <a href="https://doi.org/10.1063/1.531249">doi:10.1063/1.531249</a></li>
+        <li>Maldacena, J. (1998). The Large N Limit of Superconformal Field Theories and Supergravity. <em>Adv. Theor. Math. Phys.</em>, 2, 231–252.</li>
+        <li>Planck Collaboration (2020). Planck 2018 results. VI. Cosmological parameters. <em>Astron. Astrophys.</em>, 641, A6. <a href="https://doi.org/10.1051/0004-6361/201833910">doi:10.1051/0004-6361/201833910</a></li>
+        <li>Planck Collaboration (2020). Planck 2018 results. X. Constraints on inflation. <em>Astron. Astrophys.</em>, 641, A10. <a href="https://doi.org/10.1051/0004-6361/201833887">doi:10.1051/0004-6361/201833887</a></li>
+        <li>DESI Collaboration (2016). The DESI Experiment Part I: Science, Targeting, and Survey Design. arXiv:1611.00036.</li>
+        <li>Laureijs, R. et al. (2011). Euclid Definition Study Report. arXiv:1110.3193.</li>
+        <li>LSST Science Collaboration (2009). LSST Science Book, v2.0. arXiv:0912.0201.</li>
+        <li>LISA Collaboration (2017). Laser Interferometer Space Antenna. arXiv:1702.00786.</li>
+        <li>LISA Cosmology Working Group (2023). Cosmology with LISA. <em>Living Rev. Relativity</em>, 26(5). <a href="https://doi.org/10.1007/s41114-023-00041-4">doi:10.1007/s41114-023-00041-4</a></li>
+        <li>SKA Cosmology SWG (2020). Cosmology with Phase 1 of the SKA. <em>PASA</em>, 37, e007. <a href="https://doi.org/10.1017/pasa.2019.51">doi:10.1017/pasa.2019.51</a></li>
+      </ol>
+      <p class="meta">all references are inlined here for github pages compatibility.</p>
+    </section>
+  </main>
 
   <footer>
-    <div class="wrap">
-      © 2025 J.M. Devine • Fractal Causality™ • Law of Expansion™ • Continuous Quantum Bursts™<br/>
-      ♾️ The Infinity Bundle • We have planted our flag on the moon — the Observer has arrived.
-    </div>
+    <p>© j.m. devine — fractal causality v3.3</p>
   </footer>
 </body>
 </html>
