@@ -11,7 +11,12 @@
       --bg:#0b0d10; --fg:#e9edf1; --muted:#9aa6b2; --accent:#5cc8ff; --card:#131720;
     }
     *{box-sizing:border-box}
-    body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,"Helvetica Neue",Arial}
+    body{
+      margin:0;background:var(--bg);color:var(--fg);
+      font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,"Helvetica Neue",Arial,
+           "STIX Two Text","Cambria Math","DejaVu Sans","Noto Sans Symbols","Apple Symbols";
+      -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
+    }
     a{color:var(--accent);text-decoration:none}
     a:hover{text-decoration:underline}
     .wrap{max-width:980px;margin:0 auto;padding:48px 20px}
@@ -34,7 +39,7 @@
       <div class="title">Synchronization Threshold in Coupled Logistic Maps</div>
       <div class="subtitle">
         Reproducible Lyapunov analysis (LLE &amp; TLE) shows a sustained transverse
-        crossing at <strong>&epsilon; &asymp; 0.3462</strong> for mean-field coupling while LLE remains positive — synchronized chaos.
+        crossing at <strong>&epsilon; &asymp; 0.3462</strong> for mean-field coupling while LLE remains positive &mdash; synchronized chaos.
       </div>
       <div class="cta">
         <a class="btn primary" href="https://doi.org/10.5281/zenodo.17244363" target="_blank" rel="noopener">View on Zenodo (DOI)</a>
@@ -47,8 +52,8 @@
       <h2>Summary</h2>
       <p>
         We reproduce classic results on synchronization transitions in coupled map lattices (CMLs), following Kaneko (Physica D, 1990).
-        Using Benettin’s method, we compute the largest Lyapunov exponent (LLE) and the transverse Lyapunov exponent (TLE) in coupled logistic maps.
-        In mean-field coupling, TLE crosses below zero at &epsilon; &asymp; 0.3462 while LLE stays &asymp;0.45–0.50.
+        Using Benettin&rsquo;s method, we compute the largest Lyapunov exponent (LLE) and the transverse Lyapunov exponent (TLE) in coupled logistic maps.
+        In mean-field coupling, TLE crosses below zero at &epsilon; &asymp; 0.3462 while LLE stays &asymp; 0.45&ndash;0.50.
       </p>
       <img src="./lle_tle_vs_eps.png" alt="LLE and TLE vs epsilon with crossing marked">
     </section>
@@ -57,11 +62,11 @@
       <h2>How to Reproduce (Colab)</h2>
       <ol>
         <li>Open Google Colab and create a new notebook.</li>
-        <li>Paste the one-cell “mean-field LLE+TLE sweep” block from the paper/notebook.</li>
+        <li>Paste the one-cell &ldquo;mean-field LLE+TLE sweep&rdquo; block from the paper/notebook.</li>
         <li>Run the cell. You should see the LLE/TLE curves and a crossing near &epsilon; &asymp; 0.346.</li>
       </ol>
       <p>
-        For tighter estimates near the crossing, increase <code>measure_T</code>, try a larger <code>L</code>, and average over 2–3 seeds.
+        For tighter estimates near the crossing, increase <code>measure_T</code>, try a larger <code>L</code>, and average over 2&ndash;3 seeds.
       </p>
     </section>
 
@@ -83,12 +88,12 @@
 
     <section class="card" style="margin-top:16px">
       <h2>Reference</h2>
-      <p>Kaneko, K. (1990). “Clustering, coding, switching, hierarchical ordering, and control in a network of chaotic elements.” <em>Physica D</em> 41(2), 137–172.</p>
+      <p>Kaneko, K. (1990). &ldquo;Clustering, coding, switching, hierarchical ordering, and control in a network of chaotic elements.&rdquo; <em>Physica D</em> 41(2), 137&ndash;172.</p>
     </section>
   </main>
 
   <footer>
-    <p>© 2025 Jeff M. Devine — Text/figures: CC BY 4.0 · Code: MIT</p>
+    <p>&copy; 2025 Jeff M. Devine &mdash; Text/figures: CC BY 4.0 &middot; Code: MIT</p>
   </footer>
 </body>
 </html>
