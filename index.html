@@ -7,9 +7,7 @@
   <meta name="description" content="A reproducible numerical study of the synchronization threshold in coupled logistic-map lattices (CMLs).">
   <link rel="preconnect" href="https://zenodo.org">
   <style>
-    :root{
-      --bg:#0b0d10; --fg:#e9edf1; --muted:#9aa6b2; --accent:#5cc8ff; --card:#131720;
-    }
+    :root{ --bg:#0b0d10; --fg:#e9edf1; --muted:#9aa6b2; --accent:#5cc8ff; --card:#131720; }
     *{box-sizing:border-box}
     body{
       margin:0;background:var(--bg);color:var(--fg);
@@ -55,7 +53,16 @@
         Using Benettin&rsquo;s method, we compute the largest Lyapunov exponent (LLE) and the transverse Lyapunov exponent (TLE) in coupled logistic maps.
         In mean-field coupling, TLE crosses below zero at &epsilon; &asymp; 0.3462 while LLE stays &asymp; 0.45&ndash;0.50.
       </p>
-      <img src="./lle_tle_vs_eps.png" alt="LLE and TLE vs epsilon with crossing marked">
+
+      <!-- Figure from Zenodo with graceful fallback -->
+      <a href="https://doi.org/10.5281/zenodo.17244363" target="_blank" rel="noopener">
+        <img
+          src="https://zenodo.org/record/17244363/files/lle_tle_vs_eps.png?download=1"
+          alt="LLE and TLE vs epsilon with crossing marked"
+          width="900" height="540" loading="lazy"
+          onerror="this.outerHTML='<p>Figure: LLE &amp; TLE vs &epsilon; — <a href=&quot;https://zenodo.org/record/17244363&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;>open on Zenodo</a></p>';"
+        />
+      </a>
     </section>
 
     <section class="card" style="margin-top:16px">
