@@ -1,157 +1,94 @@
-<!-- Top Navigation Bar -->
-<nav style="background-color:#0b0b0b; border-bottom:2px solid #222; padding:12px 0; font-family:Helvetica, Arial, sans-serif; font-size:0.95em;">
-  <div style="max-width:1200px; margin:0 auto; display:flex; justify-content:space-between; align-items:center; padding:0 20px;">
-    
-    <!-- Left: Brand -->
-    <div style="color:#00bfff; font-weight:bold; letter-spacing:0.5px;">
-      Fractal Causality™
-    </div>
-    
-    <!-- Right: Links -->
-    <div>
-      <a href="/" style="color:#e6e6e6; margin:0 12px; text-decoration:none;">Home</a>
-      <a href="#downloads" style="color:#e6e6e6; margin:0 12px; text-decoration:none;">Whitepaper</a>
-      <a href="https://github.com/jeff2012devine/fractal-causality" target="_blank" style="color:#e6e6e6; margin:0 12px; text-decoration:none;">GitHub</a>
-      <a href="https://zenodo.org/record/17221015" target="_blank" style="color:#e6e6e6; margin:0 12px; text-decoration:none;">Zenodo</a>
-      <a href="mailto:jmdevine@proton.me" style="color:#e6e6e6; margin:0 12px; text-decoration:none;">Contact</a>
-    </div>
-  </div>
-</nav>
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Fractal Causality — v3.3</title>
-  <meta name="description" content="Fractal Causality v3.3 — A bounce–holographic–conformal cosmology with testable predictions across CMB, LSS, GWs, and 21 cm." />
-  <meta property="og:title" content="Fractal Causality — v3.3" />
-  <meta property="og:description" content="A bounce–holographic–conformal cosmology with testable predictions across CMB, LSS, GWs, and 21 cm." />
-  <meta property="og:type" content="website" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Synchronization Threshold in Coupled Logistic Maps</title>
+  <meta name="description" content="A reproducible numerical study of the synchronization threshold in coupled logistic-map lattices (CMLs).">
+  <link rel="preconnect" href="https://zenodo.org">
   <style>
     :root{
-      --bg:#0b0b0c;--card:#131316;--ink:#e8e8ea;--muted:#a8a8ae;
-      --accent:#7dd3fc;--accent2:#a78bfa;--border:#222226;
-      --code:#0f172a;--code-ink:#e5e7eb
+      --bg:#0b0d10; --fg:#e9edf1; --muted:#9aa6b2; --accent:#5cc8ff; --card:#131720;
     }
     *{box-sizing:border-box}
-    html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);
-      font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,"Noto Sans"}
+    body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,"Helvetica Neue",Arial}
     a{color:var(--accent);text-decoration:none}
     a:hover{text-decoration:underline}
-    header{padding:56px 20px 24px;text-align:center}
-    .wrap{max-width:980px;margin:0 auto;padding:0 20px 64px}
-    .title{font-size:clamp(28px,4vw,40px);font-weight:700;letter-spacing:.2px}
-    .subtitle{color:var(--muted);margin-top:6px}
-    .badge-row{margin-top:18px;display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
-    .badge{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border:1px solid var(--border);
-      border-radius:10px;background:linear-gradient(180deg,#16161a,#0f0f12);color:var(--ink);font-size:14px}
-    .badge .dot{width:10px;height:10px;border-radius:50%;background:radial-gradient(circle at 30% 30%,var(--accent),var(--accent2))}
-    .grid{display:grid;grid-template-columns:1fr;gap:18px;margin-top:28px}
-    @media (min-width:840px){.grid{grid-template-columns:1.1fr .9fr}}
-    .card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:22px}
-    h2{margin:0 0 8px;font-size:22px}
-    h3{margin:24px 0 10px;font-size:18px}
-    p{margin:10px 0}
-    .muted{color:var(--muted)}
-    .kicker{text-transform:uppercase;letter-spacing:.14em;font-size:12px;color:var(--muted)}
-    .list{margin:10px 0 0 18px;padding:0}
-    .list li{margin:6px 0}
-    .downloads a{display:inline-flex;align-items:center;gap:10px;padding:10px 12px;margin:8px 10px 0 0;
-      border:1px solid var(--border);background:#0e0e11;border-radius:10px}
-    .downloads a:hover{border-color:#2a2a31;text-decoration:none}
-    .mono{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,"Courier New",monospace;background:var(--code);
-      color:var(--code-ink);padding:1px 6px;border-radius:6px;border:1px solid #0b1020}
-    .codeblock{background:var(--code);color:var(--code-ink);padding:14px;border-radius:10px;border:1px solid #0b1020;overflow-x:auto}
-    footer{color:var(--muted);text-align:center;padding:40px 20px 60px}
-    .hr{height:1px;background:linear-gradient(90deg,transparent,#1e1e25,transparent);border:0;margin:24px 0}
+    .wrap{max-width:980px;margin:0 auto;padding:48px 20px}
+    .hero{display:grid;gap:16px;justify-items:start;margin-bottom:28px}
+    .title{font-size:2rem;font-weight:700;line-height:1.2}
+    .subtitle{color:var(--muted);max-width:60ch}
+    .cta{display:flex;gap:12px;flex-wrap:wrap}
+    .btn{padding:10px 14px;border-radius:10px;border:1px solid #2a2f3a;background:#1a1f2a;color:var(--fg)}
+    .btn.primary{background:#177de9;border-color:#177de9}
+    .card{background:var(--card);border:1px solid #1f2430;border-radius:14px;padding:16px}
+    img{max-width:100%;height:auto;border-radius:10px;border:1px solid #1f2430}
+    h2{margin:26px 0 12px}
+    footer{color:var(--muted);padding:32px 20px;text-align:center}
+    code,pre{background:#0f131b;border:1px solid #1f2430;border-radius:8px;padding:2px 6px}
   </style>
 </head>
 <body>
-  <header>
-    <div class="title">Fractal Causality: A Bounce–Holographic–Conformal Cosmology</div>
-    <div class="subtitle">Author: <strong>J.M. Devine</strong> · Version: <strong>v3.3</strong></div>
-    <div class="badge-row">
-      <span class="badge"><span class="dot"></span> DOI: <strong class="mono">10.5281/zenodo.17221015</strong></span>
-      <span class="badge">License: <strong>CC BY 4.0</strong></span>
-    </div>
-  </header>
-
   <main class="wrap">
-    <section class="grid">
-      <article class="card">
-        <div class="kicker">Abstract</div>
-        <p><em>Fractal Causality™</em> proposes the universe is a self-similar, cyclical process in which local collapses seed new expansions. Black holes act as transformation chambers where holographically stored information undergoes a loop-quantum-gravity–style bounce and a conformal flip, re-expressing compressed 2D data as new 3D initial conditions. This release presents a minimal mathematical model, stability criteria, and falsifiable predictions for the CMB, large-scale structure, gravitational waves, and 21 cm surveys.</p>
-
-        <h3>Author’s Note</h3>
-        <p>This work is offered as an open hypothesis—a bridge between physics, mathematics, and meaning. Developed outside traditional institutions, it leans not on biography, but on mathematics, consistency, and evidence. Engage with the model, test its claims, and challenge its implications.</p>
-
-        <hr class="hr" />
-        <h3>Downloads</h3>
-        <div class="downloads">
-          <a href="whitepaper_part1_core_model_v3.3.pdf" download>📄 Part I — Core Model (PDF)</a>
-          <a href="whitepaper_part2_derivations_v3.3.pdf" download>📄 Part II — Derivations &amp; Implementation (PDF)</a>
-          <a href="whitepaper_part3_tests_refs_v3.3.pdf" download>📄 Part III — Falsifiability, Testing &amp; References (PDF)</a>
-          <a href="infinity_bundle_v3.3.pdf" download>🗂️ Infinity Bundle (All-in-One PDF)</a>
-        </div>
-      </article>
-
-      <aside class="card">
-        <div class="kicker">Quick Start</div>
-        <h2>How to Test the Model</h2>
-        <ul class="list">
-          <li><strong>CMB:</strong> jointly fit <span class="mono">n_s</span>, <span class="mono">f_NL</span>, and <span class="mono">r</span>; check predicted correlations and low-ℓ anomalies.</li>
-          <li><strong>LSS:</strong> search for log-periodic oscillations in <span class="mono">P(k)</span> and small BAO shifts (10⁻⁴–10⁻³).</li>
-          <li><strong>GWs:</strong> target a stochastic background detectable by LISA for <span class="mono">r ≥ 0.03</span>, slope <span class="mono">n_t ≈ 3 − α</span>.</li>
-          <li><strong>21 cm:</strong> test for oscillatory features <span class="mono">ΔP/P ~ 10⁻³</span> at <span class="mono">z ~ 10–20</span> (SKA).</li>
-          <li><strong>Halo demographics:</strong> look for clustering excess at <span class="mono">10¹³–10¹⁵ M☉</span>.</li>
-        </ul>
-        <p class="muted">Decision rule: ≥2 confirmations → strong evidence; any hard falsifier → revise; mixed → refine parameters.</p>
-      </aside>
+    <section class="hero">
+      <div class="title">Synchronization Threshold in Coupled Logistic Maps</div>
+      <div class="subtitle">
+        Reproducible Lyapunov analysis (LLE &amp; TLE) shows a sustained transverse crossing at
+        <strong>ε ≈ 0.3462</strong> for mean-field coupling while LLE remains positive—synchronized chaos.
+      </div>
+      <div class="cta">
+        <a class="btn primary" href="https://doi.org/10.5281/zenodo.17244363" target="_blank" rel="noopener">View on Zenodo (DOI)</a>
+        <a class="btn" href="./synchronization_threshold_cml_whitepaper_with_fig.pdf">Download White Paper (PDF)</a>
+        <a class="btn" href="./lle_tle_vs_eps.png">View Figure</a>
+      </div>
     </section>
 
-    <section class="card" id="outline">
-      <div class="kicker">Contents</div>
-      <h2>Whitepaper Outline (v3.3)</h2>
-      <ol class="list">
-        <li><strong>Part I — The Core Model:</strong> Bounce + conformal flip; horizon data → initial conditions; mass–spectrum relations; stability constraints.</li>
-        <li><strong>Part II — Derivations &amp; Implementation:</strong> Observational discriminants; numerical bounce; refined predictions; stability analysis.</li>
-        <li><strong>Part III — Falsifiability &amp; Testing:</strong> Vulnerable predictions; smoking-gun signals; practical testing guide; references.</li>
+    <section class="card">
+      <h2>Summary</h2>
+      <p>
+        We reproduce classic results on synchronization transitions in coupled map lattices (CMLs), following Kaneko (Physica D, 1990).
+        Using Benettin’s method, we compute the largest Lyapunov exponent (LLE) and the transverse Lyapunov exponent (TLE) in coupled logistic maps.
+        In mean-field coupling, TLE crosses below zero at ε ≈ 0.3462 while LLE stays ≈0.45–0.50.
+      </p>
+      <img src="./lle_tle_vs_eps.png" alt="LLE and TLE vs epsilon with crossing marked">
+    </section>
+
+    <section class="card" style="margin-top:16px">
+      <h2>How to Reproduce (Colab)</h2>
+      <ol>
+        <li>Open Google Colab and create a new notebook.</li>
+        <li>Paste the one-cell “mean-field LLE+TLE sweep” block from the paper/notebook.</li>
+        <li>Run the cell. You should see the LLE/TLE curves and a crossing near ε ≈ 0.346.</li>
       </ol>
+      <p>
+        For tighter estimates near the crossing, increase <code>measure_T</code>, try a larger <code>L</code>, and average over 2–3 seeds.
+      </p>
     </section>
 
-    <section class="card" id="references">
-      <div class="kicker">References</div>
-      <h2>Selected Bibliography</h2>
-      <ol class="list">
-        <li>Bojowald, M. (2001). Absence of Singularity in Loop Quantum Cosmology. <em>Phys. Rev. Lett.</em> 86, 5227–5230. doi:10.1103/PhysRevLett.86.5227</li>
-        <li>Ashtekar, A., Pawlowski, T., &amp; Singh, P. (2006). Quantum Nature of the Big Bang. <em>Phys. Rev. Lett.</em> 96, 141301. doi:10.1103/PhysRevLett.96.141301</li>
-        <li>Penrose, R. (2010). <em>Cycles of Time</em>. Bodley Head.</li>
-        <li>’t Hooft, G. (1993). Dimensional Reduction in Quantum Gravity. arXiv:gr-qc/9310026</li>
-        <li>Susskind, L. (1995). The World as a Hologram. <em>J. Math. Phys.</em> 36, 6377. doi:10.1063/1.531249</li>
-        <li>Maldacena, J. (1998). The Large N Limit of Superconformal Field Theories and Supergravity. <em>Adv. Theor. Math. Phys.</em> 2, 231.</li>
-        <li>Planck Collaboration (2020). Planck 2018 results. VI. Cosmological parameters. <em>A&amp;A</em> 641, A6. doi:10.1051/0004-6361/201833910</li>
-        <li>Planck Collaboration (2020). Planck 2018 results. X. Constraints on inflation. <em>A&amp;A</em> 641, A10. doi:10.1051/0004-6361/201833887</li>
-        <li>DESI Collaboration (2016). The DESI Experiment Part I: Science, Targeting, and Survey Design. arXiv:1611.00036</li>
-        <li>Laureijs, R. et al. (2011). Euclid Definition Study Report. arXiv:1110.3193</li>
-        <li>LSST Science Collaboration (2009). LSST Science Book, v2.0. arXiv:0912.0201</li>
-        <li>Amaro-Seoane, P. et al. (2017). LISA. arXiv:1702.00786</li>
-        <li>LISA Cosmology Working Group (2023). Cosmology with LISA. <em>Living Reviews in Relativity</em> 26, 5. doi:10.1007/s41114-023-00041-4</li>
-        <li>SKA Cosmology SWG (2020). Cosmology with Phase 1 of the SKA. <em>PASA</em> 37, e007. doi:10.1017/pasa.2019.51</li>
-      </ol>
-      <p class="muted">Full citations are also embedded in the Part III PDF.</p>
+    <section class="card" style="margin-top:16px">
+      <h2>Citation</h2>
+      <p>
+        Devine, J.M. (2025). <em>Synchronization Threshold in Coupled Logistic Maps: A Numerical Reproduction</em> (v3.8). Zenodo.
+        <a href="https://doi.org/10.5281/zenodo.17244363" target="_blank" rel="noopener">https://doi.org/10.5281/zenodo.17244363</a>
+      </p>
+      <pre><code>@misc{Devine2025CMLSync,
+  author  = {Jeff M. Devine},
+  title   = {Synchronization Threshold in Coupled Logistic Maps: A Numerical Reproduction},
+  year    = {2025},
+  version = {v3.8},
+  doi     = {10.5281/zenodo.17244363},
+  url     = {https://doi.org/10.5281/zenodo.17244363}
+}</code></pre>
     </section>
 
-    <section class="card" id="citation">
-      <div class="kicker">Cite</div>
-      <h2>How to Cite</h2>
-      <div class="codeblock"><code>
-Devine, J.M. (2025). Fractal Causality: A Bounce–Holographic–Conformal Cosmology (v3.3). Zenodo. https://doi.org/10.5281/zenodo.17221015
-      </code></div>
+    <section class="card" style="margin-top:16px">
+      <h2>Reference</h2>
+      <p>Kaneko, K. (1990). “Clustering, coding, switching, hierarchical ordering, and control in a network of chaotic elements.” <em>Physica D</em> 41(2), 137–172.</p>
     </section>
   </main>
 
   <footer>
-    © 2025 J.M. Devine · Fractal Causality™ · DOI <span class="mono">10.5281/zenodo.17221015</span>
+    <p>© 2025 Jeff M. Devine — Text/figures: CC BY 4.0 · Code: MIT</p>
   </footer>
 </body>
 </html>
