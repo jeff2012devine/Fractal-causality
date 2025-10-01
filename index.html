@@ -42,8 +42,7 @@
       <div class="cta">
         <a class="btn primary" href="https://doi.org/10.5281/zenodo.17244363" target="_blank" rel="noopener">View on Zenodo (DOI)</a>
         <a class="btn" href="./synchronization_threshold_cml_whitepaper_with_fig.pdf">Download White Paper (PDF)</a>
-        <!-- FIXED: point button to the hosted figure on Zenodo to avoid 404 -->
-        <a class="btn" href="https://zenodo.org/record/17244363/files/lle_tle_vs_eps.png?download=1" target="_blank" rel="noopener">View Figure</a>
+        <!-- View Figure button intentionally removed to avoid 404 -->
       </div>
     </section>
 
@@ -55,15 +54,10 @@
         In mean-field coupling, TLE crosses below zero at &epsilon; &asymp; 0.3462 while LLE stays &asymp; 0.45&ndash;0.50.
       </p>
 
-      <!-- Figure from Zenodo with graceful fallback -->
-      <a href="https://doi.org/10.5281/zenodo.17244363" target="_blank" rel="noopener">
-        <img
-          src="https://zenodo.org/record/17244363/files/lle_tle_vs_eps.png?download=1"
-          alt="LLE and TLE vs epsilon with crossing marked"
-          width="900" height="540" loading="lazy"
-          onerror="this.outerHTML='<p>Figure: LLE &amp; TLE vs &epsilon; — <a href=&quot;https://zenodo.org/record/17244363&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;>open on Zenodo</a></p>';"
-        />
-      </a>
+      <!-- Optional inline image (safe: shows message if missing) -->
+      <p style="color:#9aa6b2">
+        Figure available in the whitepaper and Zenodo record.
+      </p>
     </section>
 
     <section class="card" style="margin-top:16px">
